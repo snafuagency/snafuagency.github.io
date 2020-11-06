@@ -1,1 +1,55 @@
+/* © 2020, Ian Quinn */
 
+body {
+    padding: 2rem;
+    background: #212121;
+    font-family: monospace;
+    font-size: 128%;
+    color: #eaeaea;
+    text-align:left;
+}
+
+h1,
+h2,
+h3 {
+    margin: 0 0 1rem;
+}
+
+h4 {
+    margin: 0 0 .64rem;
+}
+
+h5,
+h6 {
+    margin: 0;
+}
+
+h1{
+    font-size: 1.6rem;
+    letter-spacing: 0.64rem;
+    word-spacing: -0.64rem;
+    text-transform: uppercase;
+}
+h2{
+    font-size: 1rem;
+    letter-spacing: .24rem;
+    word-spacing: .0125rem;
+    text-transform: uppercase;
+}
+
+
+a{
+    color: #76FF03;
+}
+
+section{
+    margin: 2.4rem 0 0;
+}
+
+article{
+    margin: 1.6rem 0 0;
+}
+
+aside{
+    margin: 1rem 0;
+}
