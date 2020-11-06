@@ -1,7 +1,19 @@
 /* © 2020, Ian Quinn */
 
+html {
+    display: block;
+    margin:0;
+    padding: 0;
+    width: 100%;
+    height: auto;
+}
+
 body {
+    display: block;
+    margin:0;
     padding: 1.6rem;
+    width: auto;
+    height: auto;
     background: #212121;
     font-family: 'VT323', monospace;
     font-size: 180%;
@@ -52,7 +64,11 @@ p{
 a{
     color: #00E676;
 }
-
+main{
+    display: block;
+    padding: 1.6rem;
+    width: auto;
+}
 section{
     margin: 2.4rem 0 0;
 }
@@ -63,4 +79,71 @@ article{
 
 aside{
     margin: 1rem 0;
+}
+
+.reticle{
+    display: inline-block;
+    position: fixed;
+    z-index: -1;
+    padding: 1.6rem;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+}
+.reticle__inner{
+    display: block;
+    position: relative;
+    z-index: 0;
+    width: 100%;
+    height: 100%;
+    background: transparent;
+}
+.reticle__corner{
+    display: inline-block;
+    position: absolute;
+    z-index: -1;
+    border: 1px solid #00E676;
+    width: 0.8rem;
+    height: 0.8rem;
+    background: transparent;
+}
+.reticle__corner--top-left{
+    top: -0.8rem;
+    left: -0.8rem;
+    border-bottom: 0;
+    border-right: 0;
+}
+.reticle__corner--top-right{
+    top: -0.8rem;
+    right: -0.8rem;
+    border-bottom: 0;
+    border-left: 0;
+}
+.reticle__corner--bottom-left{
+    bottom: -0.8rem;
+    left: -0.8rem;
+    border-top: 0;
+    border-right: 0;
+}
+.reticle__corner--bottom-right{
+    bottom: -0.8rem;
+    right: -0.8rem;
+    border-top: 0;
+    border-left: 0;
+
+}
+.reticle__crosshair{
+    display: inline-block;
+    position: absolute;
+    z-index: -1;
+    border: 2px solid #4a4a4a;
+    border-radius: 100%;
+    width: 0.8rem;
+    height: 0.8rem;
+    background: transparent;
+    top: 50%;
+    left: 50%;
+    transform: translateY(-50%) translateX(-50%);
+    
 }
