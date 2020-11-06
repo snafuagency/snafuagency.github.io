@@ -1,44 +1,53 @@
 /* © 2020, Ian Quinn */
 
 body {
-    padding: 2rem;
+    padding: 1.6rem;
     background: #212121;
     font-family: 'VT323', monospace;
     font-size: 180%;
     letter-spacing: 256%;
-    color: #eaeaea;
     text-align:left;
-}
-
-h1,
-h2,
-h3 {
-    margin: 0 0 1rem;
-}
-
-h4 {
-    margin: 0 0 .64rem;
-}
-
-h5,
-h6 {
-    margin: 0;
+    color: #eaeaea;
 }
 
 h1{
+    margin: 0 0 1rem;
     font-size: 3.2rem;
     letter-spacing: 0.64rem;
     word-spacing: -0.64rem;
     text-transform: uppercase;
     text-align: justify;
+    color: #76FF03;
 }
+
 h2{
+    margin: 0 0 1rem;
     font-size: 1rem;
-    letter-spacing: .24rem;
-    word-spacing: .0125rem;
+    letter-spacing: 0.16rem;
+    word-spacing: -0.32rem;
     text-transform: uppercase;
 }
 
+h3{
+    margin: 0 0 1rem;
+}
+
+h4{
+    margin: 0 0 .64rem;
+}
+
+h5{
+    margin: 0;
+}
+
+h6{
+    margin: 0;
+}
+
+p{
+    margin: 0.8rem 0 0;
+    font-size: 1.6rem;
+}
 
 a{
     color: #76FF03;
