@@ -3,8 +3,9 @@
 body {
     padding: 2rem;
     background: #212121;
-    font-family: monospace;
-    font-size: 128%;
+    font-family: 'VT323', monospace;
+    font-size: 180%;
+    letter-spacing: 256%;
     color: #eaeaea;
     text-align:left;
 }
@@ -25,10 +26,11 @@ h6 {
 }
 
 h1{
-    font-size: 1.6rem;
+    font-size: 3.2rem;
     letter-spacing: 0.64rem;
     word-spacing: -0.64rem;
     text-transform: uppercase;
+    text-align: justify;
 }
 h2{
     font-size: 1rem;
