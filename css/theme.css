@@ -29,7 +29,7 @@ header{
     max-width: 32rem;
 }
 
-header a{
+header a{ 
     display: inline-block;
     clear: left;
     margin: 0 0.8rem 0.8rem 0;

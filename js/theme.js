@@ -9,5 +9,5 @@ function moveMouse(e){
     mouse.style.left = 0; // added by Ian Quinn
     mouse.style.transform = `translate(${x - 37}px, ${y - 39}px)`;
 };
-document.addEventListener("mousemove", moveMouse)
+document.addEventListener("mousemove", moveMouse) 
 // credit end
