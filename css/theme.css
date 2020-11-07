@@ -24,18 +24,24 @@ body {
 
 header{
 /*    display: none;*/
+    margin: 0 auto;
+    width: auto;
+    max-width: 32rem;
 }
 
 header a{
     display: inline-block;
     clear: left;
-    margin: 0 0 0.8rem;
+    margin: 0 0.8rem 0.8rem 0;
 }
 
 main{
     display: block;
 /*    display: none;*/
+    margin: 0 auto;
     width: auto;
+    max-width: 32rem;
+    
 }
 section{
     margin: 2.4rem 0 0;
@@ -47,10 +53,16 @@ article{
 
 aside{
 /*    display: none;*/
-    margin: 1rem 0;
+    margin: 1rem auto;
+    width: auto;
+    max-width: 32rem;
 }
 footer{
 /*    display: none;*/
+    margin: 0 auto;
+    width: auto;
+/*    max-width: 32rem;*/
+    text-align: right;
 }
 
 .reticle{
