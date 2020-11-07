@@ -29,7 +29,7 @@ header{
     max-width: 32rem;
 }
 
-header a{ 
+header a{
     display: inline-block;
     clear: left;
     margin: 0 0.8rem 0.8rem 0;
@@ -44,11 +44,11 @@ main{
     
 }
 section{
-    margin: 2.4rem 0 0;
+    margin: 4.2rem 0 0;
 }
 
 article{
-    margin: 1.6rem 0 0;
+    margin: 4.2rem 0 0;
 }
 
 aside{
@@ -146,6 +146,7 @@ h2{
 }
 h3{
     margin: 0 0 1rem;
+    text-transform: uppercase;
 }
 h4{
     margin: 0 0 .64rem;
@@ -157,7 +158,7 @@ h6{
     margin: 0;
 }
 p{
-    margin: 0.8rem 0 0;
+    margin: 1.6rem 0 0;
     font-size: 1.6rem;
 }
 ul{
@@ -170,6 +171,11 @@ a{
 a:hover{
     color: #F5F5F5;
     background: #FF3D00;
+}
+
+::selection {
+    color: #F5F5F5;
+    background: #7B1FA2;
 }
 
 *{
