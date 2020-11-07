@@ -139,17 +139,21 @@ h1{
 }
 h2{
     margin: 0 0 1rem;
-    font-size: 1rem;
+    font-size: 2.4rem;
     letter-spacing: 0.16rem;
     word-spacing: -0.32rem;
     text-transform: uppercase;
 }
 h3{
     margin: 0 0 1rem;
+    font-size: 2.4rem;
+    letter-spacing: 0.16rem;
+    word-spacing: -0.32rem;
     text-transform: uppercase;
 }
 h4{
     margin: 0 0 .64rem;
+    color: #FF3D00;
 }
 h5{
     margin: 0;
