@@ -26,7 +26,7 @@ header{
 /*    display: none;*/
     margin: 0 auto;
     width: auto;
-    max-width: 32rem;
+    max-width: 40rem;
 }
 
 header a{
@@ -40,7 +40,7 @@ main{
 /*    display: none;*/
     margin: 0 auto;
     width: auto;
-    max-width: 32rem;
+    max-width: 40rem;
     
 }
 section{
@@ -55,7 +55,7 @@ aside{
 /*    display: none;*/
     margin: 1rem auto;
     width: auto;
-    max-width: 32rem;
+    max-width: 40rem;
 }
 footer{
 /*    display: none;*/
