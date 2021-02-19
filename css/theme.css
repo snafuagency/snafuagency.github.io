@@ -225,9 +225,23 @@ body.cv .reticle__corner{
 }
 
 body.cv .crosshair{
-    width: 0.8rem;
-    height: 0.8rem;
-    border: 8px solid #0046be;
+    width: 0.64rem;
+    height: 0.64rem;
+    background: transparent;
+    border: 4px solid #0046be;
+    border-radius: 100%;
+    box-shadow: 0 0 16px 0 rgba(22,22,29,0.16)
+}
+body.cv .crosshair::before{
+    content: '';
+    position: absolute;
+    display: inline-block;
+    top: -3.844rem;
+    left: -3.844rem;
+    width: 0.24rem;
+    height: 0.24rem;
+    background: transparent;
+    border: 1px solid #8f8fbf;
     border-radius: 100%;
 }
 
@@ -240,11 +254,11 @@ body.cv .crosshair{
 }
 
 .rotating {
-  -webkit-animation: rotating 16s linear infinite;
-  -moz-animation: rotating 16s linear infinite;
-  -ms-animation: rotating 16s linear infinite;
-  -o-animation: rotating 16s linear infinite;
-  animation: rotating 16s linear infinite;
+  -webkit-animation: rotating 60s linear infinite;
+  -moz-animation: rotating 60s linear infinite;
+  -ms-animation: rotating 60s linear infinite;
+  -o-animation: rotating 60s linear infinite;
+  animation: rotating 60s linear infinite;
 }
 
 /* @@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@ */
