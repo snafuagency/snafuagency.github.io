@@ -1,3 +1,4 @@
+// © 2021, Ian Quinn
 
 // credit start https://github.com/ephraimilunga/fylo_challenge/blob/master/js/main.js
 const mouse = document.querySelector('.crosshair');

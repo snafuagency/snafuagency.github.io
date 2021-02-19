@@ -1,4 +1,4 @@
-/* © 2020, Ian Quinn */
+/* © 2021, Ian Quinn */
 
 html {
     display: block;
@@ -9,6 +9,19 @@ html {
 }
 
 body {
+    display: block;
+    margin: 0;
+    padding: 1.6rem;
+    width: auto;
+    height: auto;
+    background: #212121;
+    font-family: 'VT323', monospace;
+    font-size: 180%;
+    letter-spacing: 256%;
+    text-align:left;
+    color: #F5F5F5;
+}
+body.cv {
     display: block;
     margin: 0;
     padding: 1.6rem;
