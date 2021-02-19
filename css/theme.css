@@ -118,6 +118,7 @@ footer{
 .crosshair{
     display: inline-block;
     position: absolute;
+    z-index: 1;
     border: 2px solid #FF3D00;
     border-radius: 0;
     width: 1rem;
