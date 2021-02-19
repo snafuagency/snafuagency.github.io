@@ -185,7 +185,19 @@ a:hover{
 }
 
 /* CV Styles */
-
+body.cv {
+    display: block;
+    margin: 0;
+    padding: 1.6rem;
+    width: auto;
+    height: auto;
+    background: #F5F5F5;
+    font-family: monospace;
+    font-size: 180%;
+    letter-spacing: 256%;
+    text-align:left;
+    color: #212121;
+}
 body.cv h1,
 body.cv h2,
 body.cv h3,
