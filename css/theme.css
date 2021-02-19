@@ -21,19 +21,6 @@ body {
     text-align:left;
     color: #F5F5F5;
 }
-body.cv {
-    display: block;
-    margin: 0;
-    padding: 1.6rem;
-    width: auto;
-    height: auto;
-    background: #212121;
-    font-family: 'Major Mono Display', monospace;
-    font-size: 180%;
-    letter-spacing: 256%;
-    text-align:left;
-    color: #F5F5F5;
-}
 
 header{
 /*    display: none;*/
@@ -196,6 +183,21 @@ a:hover{
     color: #F5F5F5;
     background: #7B1FA2;
 }
+
+/* CV Styles */
+
+body.cv h1,
+body.cv h2,
+body.cv h3,
+body.cv h4,
+body.cv h5,
+body.cv h6,{
+    font-family: 'Major Mono Display', monospace;
+    font-size: 180%;
+    letter-spacing: 256%;
+    color: #F5F5F5;
+}
+
 
 *{
     cursor: none;
