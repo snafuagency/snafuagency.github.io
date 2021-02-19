@@ -14,7 +14,7 @@ body {
     padding: 1.6rem;
     width: auto;
     height: auto;
-    background: #212121;
+    background: #16161d;
     font-family: 'VT323', monospace;
     font-size: 180%;
     letter-spacing: 256%;
@@ -120,10 +120,10 @@ footer{
     display: inline-block;
     position: absolute;
     z-index: 1;
-    border: 2px solid #FF3D00;
-    border-radius: 0;
-    width: 1rem;
-    height: 1rem;
+    border: 3px solid #FF3D00;
+    border-radius: 100% 0;
+    width: 1.6rem;
+    height: 1.6rem;
     background: transparent;
     top: 50%;
     left: 50%;
@@ -184,30 +184,106 @@ a:hover{
     background: #7B1FA2;
 }
 
+/* @@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@ */
 /* CV Styles */
+/* @@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@ */
+
 body.cv {
-    display: block;
-    margin: 0;
-    padding: 1.6rem;
-    width: auto;
-    height: auto;
     background: #F5F5F5;
-    font-family: monospace;
+    font-family: 'Rubik', sans-serif;
     font-size: 180%;
     letter-spacing: 256%;
     text-align:left;
-    color: #212121;
+    color: #16161d;
 }
+
 body.cv h1,
 body.cv h2,
 body.cv h3,
 body.cv h4,
 body.cv h5,
 body.cv h6{
-    font-family: 'Major Mono Display', monospace;
-    color: #00E676;
+    color: #16161d;
+    text-transform: none;
 }
 
+body.cv a{
+    color: inherit;
+}
+body.cv a:hover{
+    color: inherit;
+    background: #ffce00;
+}
+
+body.cv ::selection {
+    color: #16161d;
+    background: #ffce00;
+}
+
+body.cv .reticle__corner{
+    border-color: transparent;
+}
+
+body.cv .crosshair{
+    width: 0.8rem;
+    height: 0.8rem;
+    border: 8px solid #0046be;
+    border-radius: 100%;
+}
+
+/* @@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@ */
+/* Utilities */
+/* @@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@ */
+
+.rotate45{
+    transform: rotate(45deg);
+}
+
+.rotating {
+  -webkit-animation: rotating 16s linear infinite;
+  -moz-animation: rotating 16s linear infinite;
+  -ms-animation: rotating 16s linear infinite;
+  -o-animation: rotating 16s linear infinite;
+  animation: rotating 16s linear infinite;
+}
+
+/* @@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@ */
+/* Animations */
+/* @@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@ */
+
+@-webkit-keyframes rotating /* Safari and Chrome */ {
+  from {
+    -webkit-transform: rotate(0deg);
+    -o-transform: rotate(0deg);
+    transform: rotate(0deg);
+  }
+  to {
+    -webkit-transform: rotate(360deg);
+    -o-transform: rotate(360deg);
+    transform: rotate(360deg);
+  }
+}
+
+@keyframes rotating {
+  from {
+    -ms-transform: rotate(0deg);
+    -moz-transform: rotate(0deg);
+    -webkit-transform: rotate(0deg);
+    -o-transform: rotate(0deg);
+    transform: rotate(0deg);
+  }
+  to {
+    -ms-transform: rotate(360deg);
+    -moz-transform: rotate(360deg);
+    -webkit-transform: rotate(360deg);
+    -o-transform: rotate(360deg);
+    transform: rotate(360deg);
+  }
+}
+
+/* @@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@ */
+/* Global Overrides */
+/* @@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@ */
 
 *{
     cursor: none;
