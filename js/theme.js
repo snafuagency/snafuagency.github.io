@@ -7,7 +7,7 @@ function moveMouse(e){
     const y = e.clientY;
     mouse.style.top = 0; // added by Ian Quinn
     mouse.style.left = 0; // added by Ian Quinn
-    mouse.style.transform = `translate(${x - 37}px, ${y - 39}px)`;
+    mouse.style.transform = `translate(${x - 37}px, ${y - 39}px)`; // values modified by Ian Quinn
 };
 document.addEventListener("mousemove", moveMouse) 
 // credit end
