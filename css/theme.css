@@ -193,8 +193,6 @@ body.cv h4,
 body.cv h5,
 body.cv h6{
     font-family: 'Major Mono Display', monospace;
-    font-size: 180%;
-    letter-spacing: 256%;
     color: #F5F5F5;
 }
 
