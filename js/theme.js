@@ -6,7 +6,7 @@ const hover = "hover";
 function moveMouse(e){
     const x = e.clientX;
     const y = e.clientY;
-    mouse.style.top = (y - 39) + 'px';
-    mouse.style.left = (x - 37) + 'px';
+    mouse.style.top = (y - 24) + 'px';
+    mouse.style.left = (x - 24) + 'px';
 };
 document.addEventListener("mousemove", moveMouse) 
