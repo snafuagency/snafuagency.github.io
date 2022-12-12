@@ -1,32 +1,64 @@
-/* © 2021, Ian Quinn */
+/* Copyright 2022, Ian Quinn */
+
+/* @@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@ */
+/* Page Structure */
+/* @@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@ */
 
 html {
-    display: block;
+/*     display: block; */
     margin:0;
     padding: 0;
-    width: 100%;
+    width: auto;
     height: auto;
 }
 
 body {
-    display: block;
+    display: grid;
+    grid-template-columns: auto;
+    grid-column-gap: 2rem;
+    grid-row-gap: 2rem;
+    grid-template-areas: 
+			'header'
+			'canvas'
+			'main'
+			'aside'
+			'footer'
+		;
+    overflow: auto;
+    z-index: 1;
     margin: 0;
-    padding: 1.6rem;
+    padding: 2rem;
     width: auto;
-    height: auto;
+    height: 100%;
     background: #16161d;
-    font-family: 'Press Start 2P', monospace;
+    font-family: 'Space Mono', monospace;
     font-size: 100%;
     letter-spacing: 256%;
     text-align:left;
     color: #F5F5F5;
+    
+    
+    
 }
 
+@media screen and (min-width: 1366px) {
+	body {
+		grid-template-columns: 24% 36% 28%;
+		grid-row-gap: 2rem;
+		grid-column-gap: 4rem;
+		grid-template-areas: 
+			'header main aside'
+			'canvas main footer'
+		;
+		padding: 6rem;
+		justify-content: space-between;
+	}
+}
+	    
+
 header{
-/*    display: none;*/
-    margin: 0 auto;
+	grid-area: header;
     width: auto;
-    max-width: 40rem;
 }
 
 header a{
@@ -35,36 +67,182 @@ header a{
     margin: 0 0.8rem 0.8rem 0;
 }
 
+header img{
+	width: 64px;
+	height: auto;
+}
+@media screen and (min-width: 1366px) {
+	header{
+		grid-column: 1 / 1;
+		grid-row: 1 / span 2;
+    }
+	header img{
+		display: inline-block;
+		position: fixed;
+	    bottom: 16px;
+	    right: 24px;
+	    width: 42px;
+		height: auto;
+/* 		transform: translate(-50%, -50%) */
+	}
+}
+
 main{
-    display: block;
-/*    display: none;*/
-    margin: 0 auto;
+	grid-area: main;
     width: auto;
-    max-width: 40rem;
-    
+}
+@media screen and (min-width: 1366px) {
+	main{
+		grid-row: 1 / span 2;
+    }
 }
 section{
-    margin: 4.2rem 0 0;
+    margin: auto;
 }
 
 article{
-    margin: 4.2rem 0 0;
+    margin: auto auto 2rem;
+}
+
+hr{
+	margin: 2rem auto;
+	border: 0;
+	height: 1px;
+	background: #7B1FA2;
 }
 
 aside{
-/*    display: none;*/
-    margin: 1rem auto;
+	grid-area: aside;
+	
     width: auto;
-    max-width: 40rem;
+}
+@media screen and (min-width: 1366px) {
+	aside{
+		grid-row: 1 / span 1;
+    }
 }
 footer{
-/*    display: none;*/
-    margin: 0 auto;
+	grid-area: footer;
     width: auto;
-/*    max-width: 32rem;*/
-    text-align: right;
+    text-align: center;
+}
+@media screen and (min-width: 1366px) {
+	footer{
+		grid-row: 2 / span 2;
+    }
 }
 
+canvas{
+	display: none !important;
+	position: absolute;
+	bottom: 24px;
+	left: 24px;
+	background: transparent;
+	z-index: -1;
+	
+}
+
+
+/* @@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@ */
+/* Typography */
+/* @@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@ */
+
+
+h1{
+    margin: 0 0 1rem;
+    font-family: 'Press Start 2P', monospace;
+    font-size: 2.4rem;
+    letter-spacing: 0.16rem;
+    word-spacing: -0.64rem;
+    text-transform: uppercase;
+    text-align: justify;
+/*     color: #00E676; */
+}
+@media screen and (min-width: 1366px) {
+	h1{
+		font-size: 3.2rem;
+	}
+}
+
+h2{
+    margin: 0 0 0.64rem;
+    font-family: 'Press Start 2P', monospace;
+	font-size: 1.6rem;
+	line-height: 150%;
+    letter-spacing: 0.16rem;
+    word-spacing: -0.32rem;
+    text-transform: uppercase;
+}
+h3{
+    margin: 0 0 0.64rem;
+    font-family: 'Press Start 2P', monospace;
+    font-size: 0.8rem;
+    letter-spacing: 0.16rem;
+    word-spacing: -0.32rem;
+    text-transform: uppercase;
+}
+h4{
+    margin: 0 0 .64rem;
+}
+h5{
+    margin: 0;
+}
+h6{
+    margin: 0;
+}
+p{
+    margin: 0 0 1.6rem;
+    font-size: 1rem;
+    line-height: 150%;
+}
+
+aside p{
+    margin: 0 0 1.6rem;
+    font-size: 0.8rem;
+    line-height: 150%;
+}
+
+ul{
+	font-size: 1rem;
+    padding:0 0 0 1.6rem;
+}
+small{
+	font-size: 0.8rem;
+	color: #00E676;
+}
+
+a{
+	font-size: 1rem;
+    color: #00E676;
+}
+
+a:hover,
+a:focus{
+    color: #F5F5F5;
+    background: #FF3D00;
+}
+
+header a{
+    font-size: 1.2rem;
+}
+
+aside a{
+    font-size: 0.8rem;
+}
+
+::selection {
+    color: #F5F5F5;
+    background: #7B1FA2;
+}
+
+
+
+/* @@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@ */
+/* Reticle + Crosshair UI */
+/* @@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@ */
+
+
+/* Reticle */
 .reticle{
     display: inline-block;
     position: fixed;
@@ -116,8 +294,91 @@ footer{
     border-left: 0;
 
 }
+
+
+/* Default Crosshair */
+
 .crosshair{
+    display: none;
+/*     display: inline-block; */
+    position: relative;
+    z-index: 2;
+    width: 1.2rem;
+    height: 1.2rem;
+    border: 1px solid #FF3D00;
+    background: transparent;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%) scale(1);
+}
+.crosshair::before {
+    content: "";
+    display: block;
+    position: absolute;
+    z-index: -1;
+    box-sizing: border-box;
+    width: 1px;
+    height: 2rem;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background: #FF3D00;
+    
+}
+.crosshair::after {
+    content: "";
+    display: block;
+    position: absolute;
+    z-index: -1;
+    box-sizing: border-box;
+    width: 2rem;
+    height: 1px;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background: #FF3D00;
+    
+}
+.crosshair__dot{
     display: inline-block;
+    position: absolute;
+    z-index: 1;
+    width: 0.32rem;
+    height: 0.32rem;
+    border: 2px solid #00E676;
+    border-radius: 100%;
+    background: #16161d;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+.crosshair__dot::before{
+	content: "";
+    display: inline-block;
+    position: absolute;
+    z-index: 1;
+    width: 2.4rem;
+    height: 2.4rem;
+    border: 1px solid #FF3D00;
+    border-radius: 100%;
+    background: transparent;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+@media screen and (min-width: 1366px) {
+	*{
+    	cursor: none;
+	}
+	.crosshair{
+    	display: inline-block;
+	}
+}
+
+/* All-Seeing Eye Crosshair */
+.crosshair.crosshair--eye{
+    display: none;
+/*     display: inline-block; */
     position: relative;
     z-index: 1;
     width: 3.6rem;
@@ -136,7 +397,7 @@ footer{
     left: 50%;
     transform: translate(-50%, -50%) scale(1);
 }
-.crosshair::before {
+.crosshair.crosshair--eye::before {
     content: "";
     display: block;
     position: absolute;
@@ -159,11 +420,7 @@ footer{
     left: 3px;
     bottom: -26px;
 }
-
-
-
-
-.crosshair__eye{
+.crosshair--eye .crosshair__eye{
     display: inline-block;
     position: absolute;
     z-index: 1;
@@ -176,7 +433,7 @@ footer{
     left: 50%;
     transform: translate(-48%, -32%) rotate(45deg);
 }
-.crosshair__dot{
+.crosshair--eye .crosshair__dot{
     display: inline-block;
     position: absolute;
     z-index: 1;
@@ -191,74 +448,32 @@ footer{
     transform: translate(-50%, -8%);
 }
 
-h1{
-    margin: 0 0 1rem;
-    font-size: 2.4rem;
-    letter-spacing: 0.64rem;
-    word-spacing: -0.64rem;
-    text-transform: uppercase;
-    text-align: justify;
-    color: #00E676;
-}
-h2{
-    margin: 0 0 1rem;
-    font-size: 2rem;
-    letter-spacing: 0.16rem;
-    word-spacing: -0.32rem;
-    text-transform: uppercase;
-}
-h3{
-    margin: 0 0 1rem;
-    font-size: 1.8rem;
-    letter-spacing: 0.16rem;
-    word-spacing: -0.32rem;
-    text-transform: uppercase;
-}
-h4{
-    margin: 0 0 .64rem;
-    color: #FF3D00;
-}
-h5{
-    margin: 0;
-}
-h6{
-    margin: 0;
-}
-p{
-    margin: 1.6rem 0 0;
-    font-size: 1.6rem;
-}
-ul{
-    padding:0 0 0 1.6rem;
-}
-
-a{
-    color: #00E676;
-}
-a:hover{
-    color: #F5F5F5;
-    background: #FF3D00;
-}
-
-::selection {
-    color: #F5F5F5;
-    background: #7B1FA2;
-}
 
 /* @@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@ */
 /* Utilities */
 /* @@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@ */
+
+@media screen and (min-width: 1366px) {
+	.hide--desktop{
+		display:none;
+	}
+}
+
+.sticky{
+	position: sticky;
+	top: 12%;
+}
 
 .rotate45{
     transform: rotate(45deg);
 }
 
 .rotating {
-  -webkit-animation: rotating 60s linear infinite;
-  -moz-animation: rotating 60s linear infinite;
-  -ms-animation: rotating 60s linear infinite;
-  -o-animation: rotating 60s linear infinite;
-  animation: rotating 60s linear infinite;
+  -webkit-animation: rotating 4s linear infinite;
+  -moz-animation: rotating 4s linear infinite;
+  -ms-animation: rotating 4s linear infinite;
+  -o-animation: rotating 4s linear infinite;
+  animation: rotating 4s linear infinite;
 }
 
 /* @@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@ */
@@ -293,12 +508,4 @@ a:hover{
     -o-transform: rotate(360deg);
     transform: rotate(360deg);
   }
-}
-
-/* @@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@ */
-/* Global Overrides */
-/* @@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@ */
-
-*{
-    cursor: none;
 }
