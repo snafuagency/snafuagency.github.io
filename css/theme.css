@@ -59,6 +59,7 @@ body {
 header{
 	grid-area: header;
     width: auto;
+    text-align: center;
 }
 
 header a{
@@ -75,7 +76,6 @@ header img{
 	header{
 		grid-column: 1 / 1;
 		grid-row: 1 / span 2;
-        text-align: center;
     }
 	header img{
 		display: inline-block;
