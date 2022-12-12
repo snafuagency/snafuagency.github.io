@@ -109,9 +109,10 @@ article{
 model-viewer{
     width: 200px;
     height: 360px;	
+    margin: 24px auto 0;
 }
 model-viewer:hover{
-    cursor: none !important;
+    /* cursor: none !important; */
 }
 
 hr{
