@@ -29,7 +29,7 @@
 		      <a href="tel:250-898-9924" rel="noopener" target="_blank">+1 (250) 898-9924</a>
 			  <a href="mailto:i.pj.quinn@gmail.com" rel="noopener" target="_blank">i.pj.quinn@gmail.com</a>
 	      </nav>
-	      <hr class="hide--desktop"/>
+        <model-viewer src="models/ian.vox.gltf" alt="Voxel Ian" auto-rotate camera-controls ios-src="models/ian.vox.gltf"></model-viewer>
 	  </div>
     </header>
     
@@ -51,21 +51,6 @@
 	        <h2>Front-End</h2>
 	        <p>HTML. CSS. SASS. JavaScript.</p>
         </article>
-        
-<!--
-        <hr/>
-        <article>
-	        <h2>Overflow Test</h2>
-	        <p>
-		        Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Gravida neque convallis a cras semper auctor neque vitae tempus. Neque viverra justo nec ultrices dui sapien eget mi proin. Maecenas sed enim ut sem viverra aliquet eget. Semper quis lectus nulla at volutpat. Eget nunc lobortis mattis aliquam faucibus. Id eu nisl nunc mi. Tellus at urna condimentum mattis pellentesque id nibh. Turpis in eu mi bibendum neque egestas congue quisque egestas. Ac tortor vitae purus faucibus ornare suspendisse sed nisi. Tellus pellentesque eu tincidunt tortor aliquam.
-
-Viverra accumsan in nisl nisi. Tincidunt arcu non sodales neque sodales ut. Accumsan lacus vel facilisis volutpat est velit egestas. Nibh nisl condimentum id venenatis. Integer malesuada nunc vel risus commodo viverra maecenas accumsan. Senectus et netus et malesuada fames. Sed arcu non odio euismod lacinia at quis risus. Suspendisse interdum consectetur libero id faucibus nisl tincidunt eget nullam. Tristique senectus et netus et malesuada. Et molestie ac feugiat sed lectus vestibulum mattis ullamcorper velit. Eros donec ac odio tempor. Cursus euismod quis viverra nibh cras pulvinar. Ultrices neque ornare aenean euismod. Sed nisi lacus sed viverra tellus. Senectus et netus et malesuada fames ac turpis. Elit ullamcorper dignissim cras tincidunt lobortis feugiat vivamus at. Mauris commodo quis imperdiet massa tincidunt. Facilisi nullam vehicula ipsum a arcu cursus vitae congue mauris. Ut morbi tincidunt augue interdum. Augue ut lectus arcu bibendum at varius vel pharetra.
-
-
-	        </p>
-        </article>
--->
-        
       </section>
     </main>
     
@@ -75,8 +60,8 @@ Viverra accumsan in nisl nisi. Tincidunt arcu non sodales neque sodales ut. Accu
 	        	<h3>Bio</h3>
 				<p>Happy husband. Fur dad. Good son. Annoying little brother. Great Lakes born. West coast adopted. Long-time musician. Photography enthusiast. Life-long gamer.</p>
 				<p><em>Creative.</em></p>
-			</article>
-			<hr/>
+        </article>
+        <hr/>
 		    <article>
 	        	<h3>Online</h3>
 				<a href="https://www.instagram.com/iqcreative" rel="noopener" target="_blank">Instagram</a>
@@ -107,9 +92,9 @@ Viverra accumsan in nisl nisi. Tincidunt arcu non sodales neque sodales ut. Accu
       </div>
     </div>
     
-    
-	<script src="js/three.js"></script>
-    <script src="js/theme.js"></script> 
+    <script type="module" src="https://unpkg.com/@google/model-viewer/dist/model-viewer.min.js"></script>
+    <script nomodule src="https://unpkg.com/@google/model-viewer/dist/model-viewer-legacy.js"></script>
+    <script type="module" src="js/theme.js"></script> 
     
   </body>
   
