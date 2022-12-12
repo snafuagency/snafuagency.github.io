@@ -75,6 +75,7 @@ header img{
 	header{
 		grid-column: 1 / 1;
 		grid-row: 1 / span 2;
+        text-align: center;
     }
 	header img{
 		display: inline-block;
@@ -166,8 +167,7 @@ h1{
     letter-spacing: 0.16rem;
     word-spacing: -0.64rem;
     text-transform: uppercase;
-    text-align: justify;
-/*     color: #00E676; */
+    color: #00E676;
 }
 @media screen and (min-width: 1366px) {
 	h1{
@@ -320,6 +320,7 @@ aside a{
     background: transparent;
     top: 50%;
     left: 50%;
+    opacity: 1;
     transform: translate(-50%, -50%) scale(1);
 }
 .crosshair::before {
@@ -332,6 +333,7 @@ aside a{
     height: 2rem;
     top: 50%;
     left: 50%;
+    opacity: 0.48;
     transform: translate(-50%, -50%);
     background: #FF3D00;
     
@@ -346,6 +348,7 @@ aside a{
     height: 1px;
     top: 50%;
     left: 50%;
+    opacity: 0.48;
     transform: translate(-50%, -50%);
     background: #FF3D00;
     
@@ -361,6 +364,7 @@ aside a{
     background: #16161d;
     top: 50%;
     left: 50%;
+    opacity: 1;
     transform: translate(-50%, -50%);
 }
 .crosshair__dot::before{
@@ -375,6 +379,7 @@ aside a{
     background: transparent;
     top: 50%;
     left: 50%;
+    opacity: 0.48;
     transform: translate(-50%, -50%);
 }
 @media screen and (min-width: 1366px) {
