@@ -62,8 +62,12 @@ header{
     text-align: center;
 }
 header h2{
-    font-size: 1.6rem;
-    letter-spacing: 0.8rem;
+    border-bottom: 0;
+    padding: 0;
+    font-family: 'Barlow', sans-serif;
+    font-size: 1.4rem;
+    font-weight: 400;
+    letter-spacing: 0.64rem;
 }
 header a{
     display: inline-block;
@@ -97,10 +101,13 @@ main{
 @media screen and (min-width: 1366px) {
 	main{
 		grid-row: 1 / span 3;
-        padding: 0.64rem 1rem; 
-        border: 8px solid #f98707;
-        border-radius: 16px;
     }
+}
+
+main article{
+    padding: 0.64rem 1rem; 
+    border: 8px solid #f98707;
+    border-radius: 16px;
 }
 
 section{
@@ -151,7 +158,7 @@ footer{
 @media screen and (min-width: 1366px) {
 	footer{
 		position: fixed;
-        right:20px;
+        left:20px;
         bottom:18px;
     }
 }
@@ -165,7 +172,7 @@ footer{
 h1{
     margin: 0 0 1rem;
     font-family: 'Barlow Condensed', sans-serif;
-    font-size: 2.4rem;
+    font-size: 6.4rem;
     font-weight: 900;
     line-height: 100%;
     letter-spacing: 0.16rem;
@@ -180,22 +187,28 @@ h1{
 }
 
 h2{
-    margin: 0 0 0.24rem;
+    margin: 0 0 0.8rem;
+    border-bottom: 8px solid #f98707;
+    padding: 0 0 0.8rem;
     font-family: 'Barlow Condensed', sans-serif;
 	font-size: 2.4rem;
     font-weight: 700;
-	line-height: 125%;
-    /* letter-spacing: 0.16rem; */
+	line-height: 100%;
     text-transform: uppercase;
     color: #f98707;
 }
+@media screen and (min-width: 1366px) {
+	h2{
+		font-size: 4rem;
+	}
+}
+
 h3{
     margin: 0 0 0.64rem;
     font-family: 'Barlow Condensed', sans-serif;
     font-size: 1.4rem;
     font-weight: 700;
     letter-spacing: 0.08rem;
-    /* word-spacing: -0.32rem; */
     text-transform: uppercase;
     color: #feee0c;
 }
@@ -210,14 +223,14 @@ h6{
     margin: 0;
 }
 p{
-    margin: 0;
+    margin: 0 0 0.32rem;
     font-family: 'Source Code Pro', monospace;
     font-size: 1.2rem;
     /* letter-spacing: 0.032rem; */
     line-height: 150%;
 }
 p + p{
-    text-indent: 1.6rem;
+    text-indent: 2.4rem;
 }
 
 aside p{
@@ -367,7 +380,7 @@ p a:focus{
     z-index: 2;
     width: 1.2rem;
     height: 1.2rem;
-    border: 1px solid #a3191b;
+    border: 2px solid #242797;
     background: transparent;
     top: 50%;
     left: 50%;
@@ -380,7 +393,7 @@ p a:focus{
     position: absolute;
     z-index: -1;
     box-sizing: border-box;
-    width: 1px;
+    width: 2px;
     height: 2.4rem;
     top: 50%;
     left: 50%;
@@ -396,7 +409,7 @@ p a:focus{
     z-index: -1;
     box-sizing: border-box;
     width: 2.4rem;
-    height: 1px;
+    height: 2px;
     top: 50%;
     left: 50%;
     opacity: 0.64;
@@ -410,7 +423,7 @@ p a:focus{
     z-index: 1;
     width: 0.32rem;
     height: 0.32rem;
-    border: 2px solid #32fead;
+    border: 2px solid #feee0c;
     border-radius: 100%;
     background: #16161d;
     top: 50%;
@@ -425,12 +438,12 @@ p a:focus{
     z-index: 1;
     width: 2.4rem;
     height: 2.4rem;
-    border: 1px solid #a3191b;
+    border: 2px solid #a3191b;
     border-radius: 100%;
     background: transparent;
     top: 50%;
     left: 50%;
-    opacity: 0.48;
+    opacity: 0.64;
     transform: translate(-50%, -50%);
 }
 @media screen and (min-width: 1366px) {
@@ -523,8 +536,8 @@ p a:focus{
     .mouse-coordinates{
         display: inline-block;
         position: fixed;
-        top:18px;
-        right:20px;
+        top:17px;
+        right:19px;
     }
 }
 
@@ -536,8 +549,8 @@ p a:focus{
     .clock__num{
         display: inline-block;
         position: fixed;
-        bottom:18px;
-        left:20px;
+        bottom:20px;
+        right:18px;
     }
 }
 
