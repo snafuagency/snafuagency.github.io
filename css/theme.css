@@ -152,8 +152,10 @@ aside{
 
 footer{
 	grid-area: footer;
+    margin: 0 0 4rem ;
     width: auto;
     text-align: center;
+    
 }
 @media screen and (min-width: 1366px) {
 	footer{
@@ -532,7 +534,10 @@ p a:focus{
 
 /* Mouse Coordinates */
 .mouse-coordinates{
-    display: none;
+    display: inline-block;
+        position: fixed;
+        top:20px;
+        right:19px;
 }
 @media screen and (min-width: 1366px) {
     .mouse-coordinates{
@@ -545,7 +550,10 @@ p a:focus{
 
 /* Clock */
 .clock__num{
-    display: none;
+    display: inline-block;
+        position: fixed;
+        bottom:21px;
+        right:19px;
 }
 @media screen and (min-width: 1366px) {
     .clock__num{
