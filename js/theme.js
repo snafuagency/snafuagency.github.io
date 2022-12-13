@@ -17,4 +17,17 @@ document.addEventListener("mousemove", moveMouse, {passive: true})
 
 
 const clock_num = document.querySelector('.clock__num');
-setInterval(() => clock_num.textContent = new Date().toISOString(),1000);
+const options = { 
+	weekday: 'short', 
+	year: 'numeric', 
+	month: 'numeric', 
+	day: 'numeric',
+	hour: '2-digit',
+	minute: '2-digit',
+	second: '2-digit',	
+	
+};
+options.timeZone = "PST";
+options.timeZoneName = "short";
+const today  = new Date();
+setInterval(() => clock_num.textContent = today.toLocaleDateString("en-CA", options),1000);
