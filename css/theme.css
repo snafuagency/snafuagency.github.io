@@ -159,7 +159,7 @@ footer{
 	footer{
 		position: fixed;
         left:20px;
-        bottom:18px;
+        bottom:20px;
     }
 }
 
@@ -245,7 +245,8 @@ ul{
     padding:0 0 0 1.6rem;
 }
 small{
-    font-family: 'VT323', monospace;
+    /* font-family: 'VT323', monospace; */
+    font-family: '7LED', sans-serif;
 	font-size: 1rem;
     font-weight: 700;
     text-transform: uppercase;
@@ -537,7 +538,7 @@ p a:focus{
     .mouse-coordinates{
         display: inline-block;
         position: fixed;
-        top:17px;
+        top:20px;
         right:19px;
     }
 }
@@ -550,8 +551,8 @@ p a:focus{
     .clock__num{
         display: inline-block;
         position: fixed;
-        bottom:20px;
-        right:18px;
+        bottom:21px;
+        right:19px;
     }
 }
 

@@ -17,4 +17,4 @@ document.addEventListener("mousemove", moveMouse, {passive: true})
 
 
 const clock_num = document.querySelector('.clock__num');
-setInterval(() => clock_num.textContent = new Date(),1000);
+setInterval(() => clock_num.textContent = new Date().toISOString(),1000);
