@@ -35,7 +35,7 @@ body {
     font-size: 100%;
     letter-spacing: 256%;
     text-align:left;
-    color: #F5F5F5;
+    color: #d8d8b4;
     
     
     
@@ -124,7 +124,8 @@ hr{
 	margin: 2rem auto;
 	border: 0;
 	height: 1px;
-	background: #7B1FA2;
+    opacity: 0.24;
+	background: #d8d8b4;
 }
 
 aside{
@@ -148,13 +149,6 @@ footer{
     }
 }
 
-.model-viewer{
-    grid-area: header;
-	border: 1px solid #7B1FA2;
-	background: transparent;
-	z-index: 1;
-	
-}
 
 
 
@@ -171,7 +165,7 @@ h1{
     letter-spacing: 0.16rem;
     word-spacing: -0.64rem;
     text-transform: uppercase;
-    color: #00E676;
+    color: #32fead;
 }
 @media screen and (min-width: 1366px) {
 	h1{
@@ -223,22 +217,34 @@ ul{
 }
 small{
 	font-size: 0.8rem;
-	color: #00E676;
+	color: #feee0c;
 }
 
 a{
-	font-size: 1rem;
-    color: #00E676;
+    padding: 0 12px;
+    border: 1px solid #f98707;
+    border-radius: 4px;
+	font-size: 0.8rem; 
+    text-decoration: none;
+    color: #d8d8b4;
 }
 
 a:hover,
 a:focus{
-    color: #F5F5F5;
-    background: #FF3D00;
+    color: #d8d8b4;
+    border: 1px solid #a3191b;
+    background: #a3191b;
+}
+
+p a{
+    padding: 0;
+    border: 0;
+    text-decoration: underline;
+    color: #feee0c;
 }
 
 header a{
-    font-size: 1.2rem;
+    font-size: 1rem;
 }
 
 aside a{
@@ -246,8 +252,8 @@ aside a{
 }
 
 ::selection {
-    color: #F5F5F5;
-    background: #7B1FA2;
+    color: #d8d8b4;
+    background: #242797;
 }
 
 
@@ -279,9 +285,9 @@ aside a{
 .reticle__corner{
     display: inline-block;
     position: absolute;
-    border: 2px solid #00E676;
-    width: 0.8rem;
-    height: 0.8rem;
+    border: 2px solid #32fead;
+    width: 1.6rem;
+    height: 1.6rem;
     background: transparent;
 }
 .reticle__corner--top-left{
@@ -320,7 +326,7 @@ aside a{
     z-index: 2;
     width: 1.2rem;
     height: 1.2rem;
-    border: 1px solid #FF3D00;
+    border: 1px solid #a3191b;
     background: transparent;
     top: 50%;
     left: 50%;
@@ -339,7 +345,7 @@ aside a{
     left: 50%;
     opacity: 0.48;
     transform: translate(-50%, -50%);
-    background: #FF3D00;
+    background: #a3191b;
     
 }
 .crosshair::after {
@@ -354,7 +360,7 @@ aside a{
     left: 50%;
     opacity: 0.48;
     transform: translate(-50%, -50%);
-    background: #FF3D00;
+    background: #a3191b;
     
 }
 .crosshair__dot{
@@ -363,7 +369,7 @@ aside a{
     z-index: 1;
     width: 0.32rem;
     height: 0.32rem;
-    border: 2px solid #00E676;
+    border: 2px solid #32fead;
     border-radius: 100%;
     background: #16161d;
     top: 50%;
@@ -378,7 +384,7 @@ aside a{
     z-index: 1;
     width: 2.4rem;
     height: 2.4rem;
-    border: 1px solid #FF3D00;
+    border: 1px solid #a3191b;
     border-radius: 100%;
     background: transparent;
     top: 50%;
