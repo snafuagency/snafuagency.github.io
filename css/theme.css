@@ -31,8 +31,9 @@ body {
     width: auto;
     height: 100%;
     background: #181218;
-    font-family: 'Space Mono', monospace;
+    font-family: 'Barlow', sans-serif;
     font-size: 100%;
+    font-weight: 400;
     letter-spacing: 256%;
     text-align:left;
     color: #d8d8b4;
@@ -40,7 +41,6 @@ body {
     
     
 }
-
 @media screen and (min-width: 1366px) {
 	body {
 		grid-template-columns: 24% 36% 28%;
@@ -56,23 +56,20 @@ body {
 	}
 }
 	    
-
 header{
 	grid-area: header;
     width: auto;
     text-align: center;
 }
-
 header h2{
-    font-size: 1rem;
+    font-size: 1.6rem;
+    letter-spacing: 0.8rem;
 }
-
 header a{
     display: inline-block;
     clear: left;
     margin: 0 0.8rem 0.8rem 0;
 }
-
 header img{
 	width: 64px;
 	height: auto;
@@ -80,7 +77,7 @@ header img{
 @media screen and (min-width: 1366px) {
 	header{
 		grid-column: 1 / 1;
-		grid-row: 1 / span 2;
+		grid-row: 1 / span 3;
     }
 	header img{
 		display: inline-block;
@@ -99,13 +96,12 @@ main{
 }
 @media screen and (min-width: 1366px) {
 	main{
-		grid-row: 1 / span 2;
-        padding: 2rem;
-        border: 1px solid rgba(216, 216, 180, 0.24);
-        border-radius: 4px;
+		grid-row: 1 / span 3;
+        padding: 0.64rem 1rem; 
+        border: 8px solid #f98707;
+        border-radius: 16px;
     }
 }
-
 
 section{
     margin: auto;
@@ -146,6 +142,7 @@ aside{
 		grid-row: 1 / span 1;
     }
 }
+
 footer{
 	grid-area: footer;
     width: auto;
@@ -154,13 +151,10 @@ footer{
 @media screen and (min-width: 1366px) {
 	footer{
 		position: fixed;
-        right:24px;
-        bottom:20px;
+        right:20px;
+        bottom:18px;
     }
 }
-
-
-
 
 
 /* @@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@ */
@@ -170,36 +164,42 @@ footer{
 
 h1{
     margin: 0 0 1rem;
-    font-family: 'Press Start 2P', monospace;
+    font-family: 'Barlow Condensed', sans-serif;
     font-size: 2.4rem;
+    font-weight: 900;
+    line-height: 100%;
     letter-spacing: 0.16rem;
-    word-spacing: -0.64rem;
+    /* word-spacing: -0.64rem; */
     text-transform: uppercase;
     color: #32fead;
 }
 @media screen and (min-width: 1366px) {
 	h1{
-		font-size: 3.2rem;
+		font-size: 4.8rem;
 	}
 }
 
 h2{
-    margin: 0 0 0.64rem;
-    font-family: 'Press Start 2P', monospace;
-	font-size: 1.6rem;
-	line-height: 150%;
-    letter-spacing: 0.16rem;
-    word-spacing: -0.32rem;
+    margin: 0 0 0.24rem;
+    font-family: 'Barlow Condensed', sans-serif;
+	font-size: 2.4rem;
+    font-weight: 700;
+	line-height: 125%;
+    /* letter-spacing: 0.16rem; */
     text-transform: uppercase;
+    color: #f98707;
 }
 h3{
     margin: 0 0 0.64rem;
-    font-family: 'Press Start 2P', monospace;
-    font-size: 0.8rem;
-    letter-spacing: 0.16rem;
-    word-spacing: -0.32rem;
+    font-family: 'Barlow Condensed', sans-serif;
+    font-size: 1.4rem;
+    font-weight: 700;
+    letter-spacing: 0.08rem;
+    /* word-spacing: -0.32rem; */
     text-transform: uppercase;
+    color: #feee0c;
 }
+
 h4{
     margin: 0 0 .64rem;
 }
@@ -210,14 +210,19 @@ h6{
     margin: 0;
 }
 p{
-    margin: 0 0 1.6rem;
-    font-size: 1rem;
+    margin: 0;
+    font-family: 'Source Code Pro', monospace;
+    font-size: 1.2rem;
+    /* letter-spacing: 0.032rem; */
     line-height: 150%;
+}
+p + p{
+    text-indent: 1.6rem;
 }
 
 aside p{
     margin: 0 0 1.6rem;
-    font-size: 0.8rem;
+    font-size: 1rem;
     line-height: 150%;
 }
 
@@ -226,41 +231,36 @@ ul{
     padding:0 0 0 1.6rem;
 }
 small{
-	font-size: 0.8rem;
+    font-family: 'VT323', monospace;
+	font-size: 1rem;
+    font-weight: 700;
+    text-transform: uppercase;
 	color: #feee0c;
 }
 
 a{
     display: inline-block;
     margin: 0 0 8px 0;
-    padding: 0 12px;
-    border: 1px solid #f98707;
+    padding: 3px 6px;
+    border: 2px solid #a3191b;
     border-radius: 4px;
-	font-size: 0.8rem; 
+    /* font-family: 'Source Code Pro', monospace; */
+	font-size: 1rem; 
+    font-weight: 700;
+    letter-spacing: 0.064rem;
     text-decoration: none;
+    text-transform: uppercase;
     color: #d8d8b4;
 }
 
 a:hover,
 a:focus{
     color: #d8d8b4;
-    border: 1px solid #a3191b;
-    background: #a3191b;
+    border: 2px solid #242797;
+    background: #242797;
 }
 
-p a{
-    margin: 0;
-    padding: 0;
-    border: 0;
-    text-decoration: underline;
-    color: #feee0c;
-}
-p a:hover,
-p a:focus{
-    color: #d8d8b4;
-    border: 0;
-    background: #a3191b;
-}
+
 
 
 
@@ -269,7 +269,25 @@ header a{
 }
 
 aside a{
-    font-size: 0.8rem;
+    font-size: inherit;
+}
+
+
+p a{
+    margin: 0;
+    padding: 0;
+    border: 0;
+    font-size: inherit;
+    font-weight: 400;
+    text-decoration: underline;
+    text-transform: none;
+    color: #feee0c;
+}
+p a:hover,
+p a:focus{
+    color: #d8d8b4;
+    border: 0;
+    background: #a3191b;
 }
 
 ::selection {
@@ -307,8 +325,8 @@ aside a{
     display: inline-block;
     position: absolute;
     border: 2px solid #32fead;
-    width: 1.6rem;
-    height: 1.6rem;
+    width: 1rem;
+    height: 1rem;
     background: transparent;
 }
 .reticle__corner--top-left{
@@ -361,10 +379,10 @@ aside a{
     z-index: -1;
     box-sizing: border-box;
     width: 1px;
-    height: 2rem;
+    height: 2.4rem;
     top: 50%;
     left: 50%;
-    opacity: 0.48;
+    opacity: 0.64;
     transform: translate(-50%, -50%);
     background: #a3191b;
     
@@ -375,11 +393,11 @@ aside a{
     position: absolute;
     z-index: -1;
     box-sizing: border-box;
-    width: 2rem;
+    width: 2.4rem;
     height: 1px;
     top: 50%;
     left: 50%;
-    opacity: 0.48;
+    opacity: 0.64;
     transform: translate(-50%, -50%);
     background: #a3191b;
     
@@ -560,7 +578,7 @@ aside a{
 /* CRT - modfied from src http://aleclownes.com/2017/02/01/crt-display.html */
 
 .crt-abberation{
-    animation: textShadow 1.6s infinite;
+    /* animation: textShadow 1.6s infinite; */
 }
 .crt::before {
     content: " ";
@@ -570,11 +588,11 @@ aside a{
     left: 0;
     bottom: 0;
     right: 0;
-    background: linear-gradient(rgba(18, 16, 16, 0) 50%, rgba(0, 0, 0, 0.04) 50%), linear-gradient(90deg, rgba(255, 0, 0, 0.04), rgba(0, 255, 0, 0.04), rgba(0, 0, 255, 0.04));
-    z-index: 2;
-    background-size: 100% 12px, 4px 100%;
+    background: linear-gradient(rgba(18, 16, 16, 0.2) 50%, rgba(0, 0, 0, 0.04) 50%), linear-gradient(90deg, rgba(255, 0, 0, 0.04), rgba(0, 255, 0, 0.04), rgba(0, 0, 255, 0.04));
+    z-index: -1;
+    background-size: 100% 9px, 3px 100%;
     pointer-events: none;
-    animation: flicker 8s infinite;
+    /* animation: flicker 8s infinite; */
     
 }
 
