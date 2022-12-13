@@ -75,23 +75,18 @@ header a{
     margin: 0 0.24rem 0.8rem 0;
 }
 header img{
-	width: 64px;
-	height: auto;
+    display: inline-block;
+    position: fixed;
+    top: 14px;
+    left: 20px;
+    width: 32px;
+    height: auto;
 }
 @media screen and (min-width: 1366px) {
 	header{
 		grid-column: 1 / 1;
 		grid-row: 1 / span 3;
     }
-	header img{
-		display: inline-block;
-		position: fixed;
-	    top: 14px;
-	    left: 20px;
-	    width: 32px;
-		height: auto;
-/* 		transform: translate(-50%, -50%) */
-	}
 }
 
 main{
@@ -173,7 +168,7 @@ footer{
 
 
 h1{
-    margin: 0 0 1rem;
+    margin: 2.4rem 0;
     font-family: 'Barlow Condensed', sans-serif;
     font-size: 6.4rem;
     font-weight: 900;

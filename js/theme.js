@@ -25,9 +25,8 @@ const options = {
 	hour: '2-digit',
 	minute: '2-digit',
 	second: '2-digit',	
-	
+	timeZone: "PST",
+	timeZoneName: "short"
 };
-options.timeZone = "PST";
-options.timeZoneName = "short";
-const today  = new Date();
-setInterval(() => clock_num.textContent = today.toLocaleDateString("en-CA", options),1000);
+const today = new Date();
+setInterval(() => clock_num.textContent = today.toLocaleDateString("en-CA", options), 1000);
