@@ -72,7 +72,7 @@ header h2{
 header a{
     display: inline-block;
     clear: left;
-    margin: 0 0.8rem 0.8rem 0;
+    margin: 0 0.24rem 0.8rem 0;
 }
 header img{
 	width: 64px;
@@ -86,8 +86,8 @@ header img{
 	header img{
 		display: inline-block;
 		position: fixed;
-	    top: 20px;
-	    left: 24px;
+	    top: 14px;
+	    left: 20px;
 	    width: 32px;
 		height: auto;
 /* 		transform: translate(-50%, -50%) */
@@ -152,7 +152,7 @@ aside{
 
 footer{
 	grid-area: footer;
-    margin: 0 0 4rem ;
+    margin: 0 0 4rem;
     width: auto;
     text-align: center;
     
@@ -160,6 +160,7 @@ footer{
 @media screen and (min-width: 1366px) {
 	footer{
 		position: fixed;
+        margin: 0;
         left:20px;
         bottom:20px;
     }
@@ -250,22 +251,24 @@ small{
     /* font-family: 'VT323', monospace; */
     font-family: '7LED', sans-serif;
 	font-size: 1rem;
-    font-weight: 700;
+    font-weight: 900;
     text-transform: uppercase;
-	color: #feee0c;
+	color: #32fead;
 }
 
 a{
     display: inline-block;
     margin: 0 0 8px 0;
-    padding: 3px 6px 4px 6px;
+    padding: 16px 16px 4px 4px;
     border: 2px solid #a3191b;
     border-radius: 4px;
+    width: auto;
+    min-width: 8rem;
     /* font-family: 'Source Code Pro', monospace; */
 	font-size: 1rem; 
     font-weight: 700;
     letter-spacing: 0.064rem;
-    text-align: center;
+    text-align: left;
     text-decoration: none;
     text-transform: uppercase;
     color: #d8d8b4;
@@ -273,8 +276,9 @@ a{
 
 a:hover,
 a:focus{
-    color: #d8d8b4;
     border: 2px solid #242797;
+    padding: 16px 16px 4px 4px;
+    color: #d8d8b4;
     background: #242797;
 }
 
@@ -287,8 +291,20 @@ header a{
 }
 
 aside a{
+    padding: 3px 6px 4px 6px;
+    width: auto;
+    min-width: initial;
     font-size: inherit;
+    text-align: center;
 }
+aside a:hover,
+aside a:focus{
+    border: 2px solid #242797;
+    padding: 3px 6px 4px 6px;
+    color: #d8d8b4;
+    background: #242797;
+}
+
 
 
 p a{
@@ -304,8 +320,10 @@ p a{
 }
 p a:hover,
 p a:focus{
-    color: #d8d8b4;
+    margin: 0;
+    padding: 0;
     border: 0;
+    color: #d8d8b4;
     background: #a3191b;
 }
 
