@@ -17,16 +17,21 @@ document.addEventListener("mousemove", moveMouse, {passive: true})
 
 
 const clock_num = document.querySelector('.clock__num');
-const options = { 
-	weekday: 'short', 
-	year: 'numeric', 
-	month: 'numeric', 
-	day: 'numeric',
-	hour: '2-digit',
-	minute: '2-digit',
-	second: '2-digit',	
-	timeZone: "PST",
-	timeZoneName: "short"
-};
-const today = new Date();
-setInterval(() => clock_num.textContent = today.toLocaleDateString("en-CA", options), 1000);
+// const options = { 
+// 	weekday: 'short', 
+// 	year: 'numeric', 
+// 	month: 'numeric', 
+// 	day: 'numeric',
+// 	hour: '2-digit',
+// 	minute: '2-digit',
+// 	second: '2-digit',	
+// 	timeZone: "PST",
+// 	timeZoneName: "short"
+// }
+// const today = new Date().toLocaleDateString("en-CA", options);
+const today = new Date().toLocaleDateString("en-CA");
+setInterval(() => 
+	
+	clock_num.textContent = today, 1000
+
+);
