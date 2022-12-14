@@ -109,7 +109,7 @@ main article{
 
 main article:hover h2,
 main article:hover p{
-    transform: translateZ(32px);
+    /* transform: translateZ(32px); */
     text-shadow:  0 2px 8px rgba(0,0,0,0.64); 
 }
 
