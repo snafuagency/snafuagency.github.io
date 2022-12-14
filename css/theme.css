@@ -164,8 +164,8 @@ footer{
 	footer{
 		position: fixed;
         margin: 0;
-        left:20px;
-        bottom:20px;
+        left:22px;
+        bottom:19px;
     }
 }
 
@@ -252,7 +252,8 @@ ul{
 }
 small{
     /* font-family: 'VT323', monospace; */
-    font-family: '7LED', sans-serif;
+    /* font-family: '7LED', sans-serif; */
+    font-family: 'DEC Terminal Modern', sans-serif;
 	font-size: 1rem;
     font-weight: 900;
     text-transform: uppercase;
@@ -405,11 +406,11 @@ p a:focus{
     z-index: 2;
     width: 1.2rem;
     height: 1.2rem;
-    border: 2px solid #242797;
+    border: 2px solid #32fead;
     background: transparent;
     top: 50%;
     left: 50%;
-    opacity: 1;
+    opacity: 0.64;
     transform: translate(-50%, -50%) scale(1);
 }
 .crosshair::before {
@@ -424,7 +425,7 @@ p a:focus{
     left: 50%;
     opacity: 0.64;
     transform: translate(-50%, -50%);
-    background: #a3191b;
+    background: #32fead;
     
 }
 .crosshair::after {
@@ -439,7 +440,7 @@ p a:focus{
     left: 50%;
     opacity: 0.64;
     transform: translate(-50%, -50%);
-    background: #a3191b;
+    background: #32fead;
     
 }
 .crosshair__dot{
@@ -463,12 +464,12 @@ p a:focus{
     z-index: 1;
     width: 2.4rem;
     height: 2.4rem;
-    border: 2px solid #a3191b;
+    border: 4px solid #242797;
     border-radius: 100%;
     background: transparent;
     top: 50%;
     left: 50%;
-    opacity: 0.64;
+    opacity: 1;
     transform: translate(-50%, -50%);
 }
 @media screen and (min-width: 1366px) {
@@ -573,23 +574,17 @@ p a:focus{
 .clock__num{
     display: inline-block;
         position: fixed;
-        bottom:21px;
+        bottom:18px;
         right:19px;
 }
 @media screen and (min-width: 1366px) {
     .clock__num{
         display: inline-block;
         position: fixed;
-        bottom:21px;
+        bottom:18px;
         right:19px;
     }
 }
-
-/* Vanilla Tilt JS*/
-.js-tilt-glare{
-    border-radius: 4px !important;
-}
-
 
 /* @@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@ */
 /* Utilities */
@@ -694,6 +689,9 @@ p a:focus{
     background: linear-gradient(rgba(213, 226, 220, 0) 0%, rgba(213, 226, 220, 0.08) 40%,rgba(213, 226, 220, 0.08) 60%, rgba(213, 226, 220, 0) 100%);
     opacity: .16;
     /* animation: scanline 8s linear infinite;} */
+
+}
+
 @keyframes scanline {
     0% {
         transform: translate3d(0,1000%,0);
