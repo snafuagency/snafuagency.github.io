@@ -17,21 +17,71 @@ document.addEventListener("mousemove", moveMouse, {passive: true})
 
 
 const clock_num = document.querySelector('.clock__num');
-// const options = { 
-// 	weekday: 'short', 
-// 	year: 'numeric', 
-// 	month: 'numeric', 
-// 	day: 'numeric',
-// 	hour: '2-digit',
-// 	minute: '2-digit',
-// 	second: '2-digit',	
-// 	timeZone: "PST",
-// 	timeZoneName: "short"
-// }
-// const today = new Date().toLocaleDateString("en-CA", options);
-const today = new Date().toLocaleDateString("en-CA");
-setInterval(() => 
-	
-	clock_num.textContent = today, 1000
+const options = { 
+	weekday: 'narrow', 
+	year: 'numeric', 
+	month: 'narrow', 
+	day: 'numeric',
+	hour12: false,
+	hour: 'numeric',
+	minute: '2-digit',
+	second: '2-digit',
+	fractionalSecondDigits: 2,	
+	timeZoneName: "short"
+}
+setInterval(() => clock_num.textContent = new Date().toLocaleDateString("en-CA", options), 100);
 
-);
+// Tilt Effect - https://codepen.io/Coding_Journey/pen/RwGzqgJ
+
+const tiltEffectSettings = {
+	max: 25, // max tilt rotation (degrees (deg))
+	perspective: 1000, // transform perspective, the lower the more extreme the tilt gets (pixels (px))
+	scale: 1.1, // transform scale - 2 = 200%, 1.5 = 150%, etc..
+	speed: 500, // speed (transition-duration) of the enter/exit transition (milliseconds (ms))
+	easing: "cubic-bezier(.03,.98,.52,.99)" // easing (transition-timing-function) of the enter/exit transition
+  };
+  
+  const cards = document.querySelectorAll(".tilt");
+  
+  cards.forEach(card => {
+	card.addEventListener("mouseenter", cardMouseEnter);
+	card.addEventListener("mousemove", cardMouseMove);
+	card.addEventListener("mouseleave", cardMouseLeave);
+  });
+  
+  function cardMouseEnter(event) {
+	setTransition(event);
+  }
+  
+  function cardMouseMove(event) {
+	const card = event.currentTarget;
+	const cardWidth = card.offsetWidth;
+	const cardHeight = card.offsetHeight;
+	const centerX = card.offsetLeft + cardWidth/2;
+	const centerY = card.offsetTop + cardHeight/2;
+	const mouseX = event.clientX - centerX;
+	const mouseY = event.clientY - centerY;
+	const rotateXUncapped = (-1)*tiltEffectSettings.max*mouseY/(cardHeight/0.64);
+	const rotateYUncapped = (+1)*tiltEffectSettings.max*mouseX/(cardWidth/0.64);
+	const rotateX = rotateXUncapped < -tiltEffectSettings.max ? -tiltEffectSettings.max : 
+					(rotateXUncapped > tiltEffectSettings.max ? tiltEffectSettings.max : rotateXUncapped);
+	const rotateY = rotateYUncapped < -tiltEffectSettings.max ? -tiltEffectSettings.max : 
+					(rotateYUncapped > tiltEffectSettings.max ? tiltEffectSettings.max : rotateYUncapped);
+  
+	card.style.transform = `perspective(${tiltEffectSettings.perspective}px) rotateX(${rotateX}deg) rotateY(${rotateY}deg) 
+							scale3d(${tiltEffectSettings.scale}, ${tiltEffectSettings.scale}, ${tiltEffectSettings.scale})`;
+  }
+  
+  function cardMouseLeave(event) {
+	event.currentTarget.style.transform = `perspective(${tiltEffectSettings.perspective}px) rotateX(0deg) rotateY(0deg) scale3d(1, 1, 1)`;
+	setTransition(event);
+  }
+  
+  function setTransition(event) {
+	const card = event.currentTarget;
+	clearTimeout(card.transitionTimeoutId);
+	card.style.transition = `transform ${tiltEffectSettings.speed}ms ${tiltEffectSettings.easing}`;
+	card.transitionTimeoutId = setTimeout(() => {
+	  card.style.transition = "";
+	}, tiltEffectSettings.speed);
+  }
