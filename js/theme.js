@@ -8,8 +8,8 @@ const hover = "hover";
 function moveMouse(e){
     const x = e.clientX;
     const y = e.clientY;
-    mouse.style.top = (y - 24) + 'px';
-    mouse.style.left = (x - 24) + 'px';
+    mouse.style.top = (y - 36) + 'px';
+    mouse.style.left = (x - 36) + 'px';
 	mouse_x_coord.textContent = x;
 	mouse_y_coord.textContent = y;
 };
