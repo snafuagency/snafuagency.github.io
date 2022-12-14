@@ -87,7 +87,8 @@ header h2{
     font-family: 'Barlow', sans-serif;
     font-size: 1.4rem;
     font-weight: 400;
-    letter-spacing: 0.64rem;
+    line-height: 100%;
+    letter-spacing: 0.8rem;
     color: var(--light);
 }
 
@@ -187,15 +188,24 @@ article{
 }
 
 model-viewer{
+    margin: 1rem auto 4rem;
+    border: 1px solid var(--green);
+    border-radius: 8px;
+    padding: 2rem 1rem;
     width: 200px;
     height: 360px;	
-    margin: 24px auto 0;
+    opacity: 1;
 }
 model-viewer:hover{
     cursor: none !important;
 }
 model-viewer::part(default-progress-bar){
     display: none;
+}
+@media screen and (min-width: 1366px) {
+	model-viewer{
+        margin: 0 auto 4rem;
+    }
 }
 
 hr{
@@ -626,7 +636,6 @@ p a:focus{
     bottom: 0;
     width: 200%;
     height: 100%;
-
 }
 .scanline:before {
     display: block;
@@ -640,7 +649,7 @@ p a:focus{
     background: rgba(213, 226, 220, 0.08);
     background: linear-gradient(rgba(213, 226, 220, 0) 0%, rgba(213, 226, 220, 0.08) 40%,rgba(213, 226, 220, 0.08) 60%, rgba(213, 226, 220, 0) 100%);
     opacity: .16;
-    /* animation: scanline 8s linear infinite; */
+    animation: scanline 8s linear infinite;
 }
 @keyframes scanline {
     0% {
