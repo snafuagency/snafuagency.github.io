@@ -29,7 +29,7 @@ const options = {
 	fractionalSecondDigits: 2,	
 	timeZoneName: "short"
 }
-setInterval(() => clock_num.textContent = new Date().toLocaleDateString("en-CA", options), 100);
+setInterval(() => clock_num.textContent = new Date().toLocaleDateString("en-CA", options), 10);
 
 // Tilt Effect - https://codepen.io/Coding_Journey/pen/RwGzqgJ
 
