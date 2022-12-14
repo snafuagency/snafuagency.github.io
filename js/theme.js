@@ -19,15 +19,15 @@ document.addEventListener("mousemove", moveMouse, {passive: true})
 const clock_num = document.querySelector('.clock__num');
 const options = { 
 	weekday: 'narrow', 
-	year: '2-digit', 
 	month: 'narrow', 
-	day: 'numeric',
+	day: '2-digit',
+	year: '2-digit',
 	hour12: false,
-	hour: 'numeric',
+	hour: '2-digit',
 	minute: '2-digit',
 	second: '2-digit',
 	fractionalSecondDigits: 2,	
-	timeZoneName: "short"
+	timeZoneName: "shortOffset"
 }
 setInterval(() => clock_num.textContent = new Date().toLocaleDateString("en-CA", options), 10);
 

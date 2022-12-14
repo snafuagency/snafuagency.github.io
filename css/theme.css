@@ -81,6 +81,23 @@ header{
     }
 }
 
+header h1{
+    margin: 2.4rem 0;
+    font-family: 'Barlow Condensed', sans-serif;
+    font-size: 6.4rem;
+    font-weight: 900;
+    line-height: 80%;
+    letter-spacing: 0.16rem;
+    /* word-spacing: -0.64rem; */
+    text-transform: uppercase;
+    color: var(--light);
+}
+@media screen and (min-width: 1366px) {
+	header h1{
+        margin: 0 0 2.4rem;
+		font-size: 6.4rem;
+	}
+}
 header h2{
     border-bottom: 0;
     padding: 0;
@@ -131,9 +148,6 @@ nav a:focus{
     background: var(--blue);
 }
 
-nav.online {
-    
-}
 nav.online a{
     border: 2px solid var(--blue);
     border-radius: 4px;
@@ -151,6 +165,23 @@ nav.online a:focus{
     background: var(--blue);
 }
 
+nav.page a{
+    border: 2px solid var(--light);
+    border-radius: 4px;
+    padding: 12px 24px 4px 6px;
+    width: auto;
+    min-width: initial;
+    font-size: 0.8rem;
+    text-align: center;
+}
+nav.page a:hover,
+nav.page a:focus{
+    border: 2px solid var(--blue);
+    padding: 12px 24px 4px 6px;
+    color: var(--light);
+    background: var(--blue);
+}
+
 main{
 	grid-area: main;
     width: auto;
@@ -159,8 +190,12 @@ main{
 	main{
         grid-area: main;
 		grid-row: 1 / span 3;
-        margin: 1.35rem 0 0;
+        /* margin: 1.35rem 0 0; */
     }
+}
+
+main section{
+    margin: auto auto 8rem; 
 }
 
 main article{
@@ -168,16 +203,6 @@ main article{
     padding: 0.64rem 0.64rem; 
     border: 8px solid var(--orange);
     border-radius: 16px;
-    transform-style: preserve-3d;
-    transform: perspective(1000px);
-}
-main article:hover{
-    /* background: rgba(36, 39, 151, 0.12); */
-}
-main article:hover h2,
-main article:hover p{
-    /* transform: translateZ(32px); */
-    /* text-shadow:  0 2px 8px rgba(0,0,0,0.64);  */
 }
 
 section{
@@ -259,17 +284,16 @@ h1{
     margin: 2.4rem 0;
     font-family: 'Barlow Condensed', sans-serif;
     font-size: 6.4rem;
-    font-weight: 900;
+    font-weight: 200;
     line-height: 80%;
-    letter-spacing: 0.16rem;
+    letter-spacing: -0.32rem;
     /* word-spacing: -0.64rem; */
     text-transform: uppercase;
     color: var(--light);
 }
 @media screen and (min-width: 1366px) {
 	h1{
-        margin: 0 0 2.4rem;
-		font-size: 6.4rem;
+        margin: 3.2rem 0 2.4rem;
 	}
 }
 
@@ -340,7 +364,6 @@ li::before{
 }
 
 small{
-    font-family: 'DEC Terminal Modern', sans-serif;
     font-family: 'Digital-7 Mono', sans-serif;
 	font-size: 1rem;
     font-weight: 900;
