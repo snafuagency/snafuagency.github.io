@@ -190,7 +190,7 @@ article{
 
 model-viewer{
     margin: 1rem auto 4rem;
-    border: 1px solid var(--green);
+    border: 1px solid var(--blue);
     border-radius: 8px;
     padding: 2rem 1rem;
     width: 200px;
