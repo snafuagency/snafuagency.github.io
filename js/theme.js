@@ -19,7 +19,7 @@ document.addEventListener("mousemove", moveMouse, {passive: true})
 const clock_num = document.querySelector('.clock__num');
 const options = { 
 	weekday: 'narrow', 
-	year: 'numeric', 
+	year: '2-digit', 
 	month: 'narrow', 
 	day: 'numeric',
 	hour12: false,

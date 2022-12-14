@@ -1,11 +1,26 @@
 /* Copyright 2022, Ian Quinn */
 
 /* @@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@ */
+/* Variables */
+/* @@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@ */
+
+/* Color */
+:root{
+    --light: #d8d8b4;
+    --dark: #181218;
+    --red: #b00c0f;
+    --green: #32fead;
+    --blue: #242797;
+    --yellow: #feee0c;
+    --orange: #f98707;
+}
+
+
+/* @@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@ */
 /* Page Structure */
 /* @@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@ */
 
 html {
-/*     display: block; */
     margin:0;
     padding: 0;
     width: auto;
@@ -30,13 +45,13 @@ body {
     padding: 2rem;
     width: auto;
     height: 100%;
-    background: #181218;
+    background: var(--dark);
     font-family: 'Barlow', sans-serif;
     font-size: 100%;
     font-weight: 400;
     letter-spacing: 256%;
     text-align:left;
-    color: #d8d8b4;
+    color: var(--light);
 }
 @media screen and (min-width: 1366px) {
 	body {
@@ -56,8 +71,16 @@ body {
 header{
 	grid-area: header;
     width: auto;
-    text-align: center;
+    text-align: left;
 }
+@media screen and (min-width: 1366px) {
+	header{
+        grid-area: header;
+		grid-column: 1 / 1;
+		grid-row: 1 / span 1;
+    }
+}
+
 header h2{
     border-bottom: 0;
     padding: 0;
@@ -65,32 +88,29 @@ header h2{
     font-size: 1.4rem;
     font-weight: 400;
     letter-spacing: 0.64rem;
+    color: var(--light);
 }
 
 header img{
     display: inline-block;
     position: fixed;
+    z-index: 1;
     top: 14px;
     left: 20px;
     width: 32px;
     height: auto;
 }
-@media screen and (min-width: 1366px) {
-	header{
-		grid-column: 1 / 1;
-		grid-row: 1 / span 3;
-    }
-}
+
 
 nav{
     margin: 0 0 1rem 0;
 }
 nav a{
     display: inline-block;
-    margin: 0 0.64rem 0.64rem 0;
+    margin: 0 0.32rem 0.64rem 0;
     padding: 16px 16px 4px 6px;
-    border: 2px solid #a3191b;
-    border-radius: 4px;
+    border: 2px solid var(--red);
+    border-radius: 6px;
     width: auto;
     min-width: 8rem;
     /* font-family: 'Source Code Pro', monospace; */
@@ -100,21 +120,22 @@ nav a{
     text-align: left;
     text-decoration: none;
     text-transform: uppercase;
-    color: #d8d8b4;
+    color: var(--light);
 }
 nav a:hover,
 nav a:focus{
-    border: 2px solid #242797;
+    border-color: var(--blue);
     padding: 16px 16px 4px 6px;
-    color: #d8d8b4;
-    background: #242797;
+    color: var(--light);
+    background: var(--blue);
 }
 
 nav.online {
     
 }
 nav.online a{
-    border: 2px solid #242797;
+    border: 2px solid var(--blue);
+    border-radius: 4px;
     padding: 12px 24px 4px 6px;
     width: auto;
     min-width: initial;
@@ -123,10 +144,10 @@ nav.online a{
 }
 nav.online a:hover,
 nav.online a:focus{
-    border: 2px solid #242797;
+    border: 2px solid var(--blue);
     padding: 12px 24px 4px 6px;
-    color: #d8d8b4;
-    background: #242797;
+    color: var(--light);
+    background: var(--blue);
 }
 
 main{
@@ -135,6 +156,7 @@ main{
 }
 @media screen and (min-width: 1366px) {
 	main{
+        grid-area: main;
 		grid-row: 1 / span 3;
     }
 }
@@ -142,7 +164,7 @@ main{
 main article{
     margin: auto auto 1rem;
     padding: 0.64rem 0.64rem; 
-    border: 8px solid #f98707;
+    border: 8px solid var(--orange);
     border-radius: 16px;
     transform-style: preserve-3d;
     transform: perspective(1000px);
@@ -153,7 +175,7 @@ main article:hover{
 main article:hover h2,
 main article:hover p{
     /* transform: translateZ(32px); */
-    text-shadow:  0 2px 8px rgba(0,0,0,0.64); 
+    /* text-shadow:  0 2px 8px rgba(0,0,0,0.64);  */
 }
 
 section{
@@ -170,7 +192,7 @@ model-viewer{
     margin: 24px auto 0;
 }
 model-viewer:hover{
-    /* cursor: none !important; */
+    cursor: none !important;
 }
 model-viewer::part(default-progress-bar){
     display: none;
@@ -181,19 +203,19 @@ hr{
 	border: 0;
 	height: 1px;
     opacity: 0.24;
-	background: #d8d8b4;
+	background: var(--light);
 }
 main hr{
 	margin: 4rem auto;
 }
 
 aside{
-	grid-area: aside;
-	
+	grid-area: aside;	
     width: auto;
 }
 @media screen and (min-width: 1366px) {
 	aside{
+        grid-area: aside;
         grid-column: 3 / 3;
 		grid-row: 1 / span 1;
     }
@@ -208,6 +230,7 @@ footer{
 }
 @media screen and (min-width: 1366px) {
 	footer{
+        grid-area: footer;
 		position: fixed;
         margin: 0;
         left:22px;
@@ -230,7 +253,7 @@ h1{
     letter-spacing: 0.16rem;
     /* word-spacing: -0.64rem; */
     text-transform: uppercase;
-    color: #32fead;
+    color: var(--light);
 }
 @media screen and (min-width: 1366px) {
 	h1{
@@ -241,14 +264,14 @@ h1{
 
 h2{
     margin: 0 0 0.48rem;
-    border-bottom: 4px solid #f98707;
+    border-bottom: 4px solid var(--orange);
     padding: 0 0 0.96rem;
     font-family: 'Barlow Condensed', sans-serif;
 	font-size: 2.4rem;
     font-weight: 700;
 	line-height: 80%;
     text-transform: uppercase;
-    color: #f98707;
+    color: var(--orange);
 }
 @media screen and (min-width: 1366px) {
 	h2{
@@ -257,13 +280,13 @@ h2{
 }
 
 h3{
-    margin: 0 0 0.64rem;
+    margin: 1rem 0 0.24rem;
     font-family: 'Barlow Condensed', sans-serif;
     font-size: 1.4rem;
     font-weight: 700;
     letter-spacing: 0.08rem;
     text-transform: uppercase;
-    color: #feee0c;
+    color: var(--yellow);
 }
 
 h4{
@@ -306,15 +329,12 @@ li::before{
 }
 
 small{
-    /* font-family: 'VT323', monospace; */
-    /* font-family: '7LED', sans-serif; */
     font-family: 'DEC Terminal Modern', sans-serif;
 	font-size: 1rem;
     font-weight: 900;
     text-transform: uppercase;
-	color: #32fead;
+	color: var(--green);
 }
-
 
 p a{
     margin: 0;
@@ -325,22 +345,21 @@ p a{
     text-align: initial;
     text-decoration: underline;
     text-transform: none;
-    color: #feee0c;
+    color: var(--yellow);
 }
 p a:hover,
 p a:focus{
     margin: 0;
     padding: 0;
     border: 0;
-    color: #d8d8b4;
-    background: #a3191b;
+    color: var(--light);
+    background: var(--red);
 }
 
 ::selection {
-    color: #d8d8b4;
-    background: #242797;
+    color: var(--light);
+    background: var(--blue);
 }
-
 
 
 /* @@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@ */
@@ -370,7 +389,7 @@ p a:focus{
 .reticle__corner{
     display: inline-block;
     position: absolute;
-    border: 2px solid #32fead;
+    border: 2px solid var(--green);
     width: 1rem;
     height: 1rem;
     background: transparent;
@@ -405,17 +424,17 @@ p a:focus{
 /* Default Crosshair */
 
 .crosshair{
-    display: none;
-/*     display: inline-block; */
+    display: none; /* Hide on mobile */
+    /* display: inline-block; */
     position: relative;
     z-index: 2;
-    width: 1.2rem;
-    height: 1.2rem;
-    border: 2px solid #32fead;
+    width: 1rem;
+    height: 1rem;
+    border: 2px solid var(--green);
     background: transparent;
     top: 50%;
     left: 50%;
-    opacity: 0.64;
+    opacity: 1;
     transform: translate(-50%, -50%) scale(1);
 }
 .crosshair::before {
@@ -425,12 +444,12 @@ p a:focus{
     z-index: -1;
     box-sizing: border-box;
     width: 2px;
-    height: 2.4rem;
+    height: 2rem;
     top: 50%;
     left: 50%;
     opacity: 1;
     transform: translate(-50%, -50%);
-    background: #32fead;
+    background: var(--green);
     
 }
 .crosshair::after {
@@ -439,24 +458,24 @@ p a:focus{
     position: absolute;
     z-index: -1;
     box-sizing: border-box;
-    width: 2.4rem;
+    width: 2rem;
     height: 2px;
     top: 50%;
     left: 50%;
     opacity: 1;
     transform: translate(-50%, -50%);
-    background: #32fead;
+    background: var(--green);
     
 }
 .crosshair__dot{
     display: inline-block;
     position: absolute;
     z-index: 1;
-    width: 0.32rem;
-    height: 0.32rem;
-    border: 4px solid #feee0c;
+    width: 0.24rem;
+    height: 0.24rem;
+    border: 4px solid var(--yellow);
     border-radius: 100%;
-    background: #16161d;
+    background: var(--dark);
     top: 50%;
     left: 50%;
     opacity: 1;
@@ -467,9 +486,9 @@ p a:focus{
     display: inline-block;
     position: absolute;
     z-index: 1;
-    width: 2.4rem;
-    height: 2.4rem;
-    border: 4px solid #242797;
+    width: 2rem;
+    height: 2rem;
+    border: 4px solid var(--blue);
     border-radius: 100%;
     background: transparent;
     top: 50%;
@@ -490,9 +509,9 @@ p a:focus{
 /* Mouse Coordinates */
 .mouse-coordinates{
     display: inline-block;
-        position: fixed;
-        top:20px;
-        right:19px;
+    position: fixed;
+    top:20px;
+    right:19px;
 }
 @media screen and (min-width: 1366px) {
     .mouse-coordinates{
@@ -506,9 +525,9 @@ p a:focus{
 /* Clock */
 .clock__num{
     display: inline-block;
-        position: fixed;
-        bottom:18px;
-        right:19px;
+    position: fixed;
+    bottom:18px;
+    right:19px;
 }
 @media screen and (min-width: 1366px) {
     .clock__num{
@@ -518,6 +537,7 @@ p a:focus{
         right:19px;
     }
 }
+
 
 /* @@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@ */
 /* Utilities */
@@ -529,9 +549,11 @@ p a:focus{
 	}
 }
 
-.sticky{
-	position: sticky;
-	top: 12%;
+@media screen and (min-width: 1366px) {	
+    .sticky{
+        position: sticky;
+        top: 12%;
+    }
 }
 
 
