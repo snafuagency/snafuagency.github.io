@@ -1,6 +1,6 @@
 // © 2021, Ian Quinn
 
-// inspired by https://github.com/ephraimilunga/fylo_challenge/blob/master/js/main.js
+// Mouse Cusor inspired by https://github.com/ephraimilunga/fylo_challenge/blob/master/js/main.js
 const mouse = document.querySelector('.crosshair');
 const mouse_x_coord = document.querySelector('.mouse-coordinates__x');
 const mouse_y_coord = document.querySelector('.mouse-coordinates__y');
@@ -14,3 +14,21 @@ function moveMouse(e){
 	mouse_y_coord.textContent = y;
 };
 document.addEventListener("mousemove", moveMouse, {passive: true})
+
+
+
+// Clock
+const clock_num = document.querySelector('.clock__num');
+const options = { 
+	weekday: 'narrow', 
+	month: 'narrow', 
+	day: '2-digit',
+	year: '2-digit',
+	hour12: false,
+	hour: '2-digit',
+	minute: '2-digit',
+	second: '2-digit',
+	fractionalSecondDigits: 2,	
+	timeZoneName: "shortOffset"
+}
+setInterval(() => clock_num.textContent = new Date().toLocaleDateString("en-CA", options), 10);
