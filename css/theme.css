@@ -133,6 +133,12 @@ header img{
     width: 32px;
     height: auto;
 }
+@media screen and (min-width: 1366px) {
+	header img{
+        top: 8px;
+        left: 45px;
+    }
+}
 
 nav{
     margin: 0 0 1rem 0;
@@ -343,8 +349,8 @@ footer{
         grid-area: footer;
 		position: fixed;
         margin: 0;
-        left:22px;
-        bottom:19px;
+        left:47px;
+        bottom:15px;
     }
 }
 
@@ -542,27 +548,31 @@ p a:focus{
 .reticle__corner{
     display: inline-block;
     position: absolute;
-    border: 1px solid var(--green);
+    /* border: 1px solid var(--green); */
     width: 1rem;
     height: 1rem;
     background: transparent;
 }
 @media (prefers-color-scheme: light) {
     .reticle__corner{
-        border: 1px solid var(--dark);
+        /* border: 1px solid var(--dark);  */
+    }
+}
+@media (prefers-color-scheme: dark) {
+    .reticle__corner{
+        /* border: 1px solid var(--light); */
     }
 }
 
-@media (prefers-color-scheme: dark) {
-    .reticle__corner{
-        border: 2px solid var(--light);
-    }
-}
 .reticle__corner--top-left{
     top: -0.8rem;
     left: -0.8rem;
     border-bottom: 0;
     border-right: 0;
+}
+.reticle__corner--top-left .crosshair{
+    /* top: 1rem; */
+    /* left: 1rem; */
 }
 .reticle__corner--top-right{
     top: -0.8rem;
@@ -570,11 +580,19 @@ p a:focus{
     border-bottom: 0;
     border-left: 0;
 }
+.reticle__corner--top-right .crosshair{
+    /* top: 1rem; */
+    /* right: 1rem; */
+}
 .reticle__corner--bottom-left{
     bottom: -0.8rem;
     left: -0.8rem;
     border-top: 0;
     border-right: 0;
+}
+.reticle__corner--bottom-left .crosshair{
+    /* bottom: 1rem;
+    left: 1rem; */
 }
 .reticle__corner--bottom-right{
     bottom: -0.8rem;
@@ -582,6 +600,10 @@ p a:focus{
     border-top: 0;
     border-left: 0;
 
+}
+.reticle__corner--bottom-right .crosshair{
+    /* bottom: 1rem;
+    right: 1rem; */
 }
 
 
@@ -606,7 +628,6 @@ p a:focus{
         border: 1px solid var(--dark);
     }
 }
-
 @media (prefers-color-scheme: dark) {
     .crosshair{
         border: 1px solid var(--light);
@@ -735,8 +756,8 @@ p a:focus{
     .mouse-coordinates{
         display: inline-block;
         position: fixed;
-        top:20px;
-        right:19px;
+        top:18px;
+        right:47px;
     }
 }
 
@@ -751,8 +772,8 @@ p a:focus{
     .clock__num{
         display: inline-block;
         position: fixed;
-        bottom:18px;
-        right:19px;
+        bottom:15px;
+        right:47px;
     }
 }
 
