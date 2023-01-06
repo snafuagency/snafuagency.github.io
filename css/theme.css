@@ -6,7 +6,7 @@
 
 /* Color */
 :root{
-    --light: rgb(216, 216, 180);
+    --light: rgb(234, 234, 212);
     --dark: rgb(40, 36, 40);
     --red: #b00c0f;
     /* --green: #32fead; */
@@ -249,7 +249,7 @@ main article{
 }
 @media (prefers-color-scheme: dark) {
     main article{
-        background-color: rgba(216,216,180, 0.04);
+        background-color: rgba(234,234,212, 0.04); 
     }
 }
 section{
@@ -276,7 +276,7 @@ model-viewer{
 }
 @media (prefers-color-scheme: dark) {
     model-viewer{
-        background-color: rgba(216,216,180, 0.04);
+        background-color: rgba(234,234,212, 0.04);
     }
 }
 model-viewer:hover{
