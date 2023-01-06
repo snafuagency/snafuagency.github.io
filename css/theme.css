@@ -236,11 +236,17 @@ main section{
 }
 
 main article{
-    margin: auto auto 1rem;
+    margin: auto auto 0.48rem;
     padding: 1rem; 
     /* border: 2px solid var(--green); */
-    border-radius: 20px;
+    border-radius: 0;
     background-color: rgba(216,216,180, 0.08);
+}
+main article:nth-child(2){
+    border-radius: 20px 20px 0 0;
+}
+main article:last-child{
+    border-radius: 0 0 20px 20px;
 }
 @media (prefers-color-scheme: light) {
     main article{
