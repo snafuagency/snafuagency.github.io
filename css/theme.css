@@ -473,7 +473,7 @@ small{
     text-transform: uppercase;
 	color: var(--green);
 }
-@media (prefers-color-scheme: light) {
+/* @media (prefers-color-scheme: light) {
     small{
         color: var(--dark);
     }
@@ -482,7 +482,7 @@ small{
     small{
         color: var(--light);
     }
-}
+} */
 
 p a{
     margin: 0;
@@ -630,9 +630,10 @@ p a:focus{
 }
 @media (prefers-color-scheme: dark) {
     .crosshair{
-        border: 1px solid var(--light);
+        border: 1px solid var(--green);
     }
 }
+
 .crosshair::before {
     content: "";
     display: block;
@@ -652,12 +653,12 @@ p a:focus{
         background: var(--dark);
     }
 }
-
 @media (prefers-color-scheme: dark) {
     .crosshair::before{
-        background: var(--light);
+        background: var(--green);
     }
 }
+
 .crosshair::after {
     content: "";
     display: block;
@@ -677,12 +678,12 @@ p a:focus{
         background: var(--dark);
     }
 }
-
 @media (prefers-color-scheme: dark) {
     .crosshair::after{
-        background: var(--light);
+        background: var(--green);
     }
 }
+
 .crosshair__dot{
     display: inline-block;
     position: absolute;
@@ -705,7 +706,7 @@ p a:focus{
 }
 @media (prefers-color-scheme: dark) {
     .crosshair__dot{
-        border: 2px solid var(--light);
+        border: 2px solid var(--green);
         background: var(--dark);
     }
 }
@@ -732,7 +733,7 @@ p a:focus{
 }
 @media (prefers-color-scheme: dark) {
     .crosshair__dot::before{
-        border: 1px solid var(--light);
+        border: 1px solid var(--green);
     }
 }
 @media screen and (min-width: 1366px) {
