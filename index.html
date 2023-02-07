@@ -8,8 +8,8 @@
     <meta name="keywords" content="Ian Quinn, Communication Design, UX, UI">
     <meta name="author" content="Ian Quinn">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="theme-color" content="#448a6e" media="(prefers-color-scheme: light)">
-    <meta name="theme-color" content="#448a6e" media="(prefers-color-scheme: dark)">
+    <meta name="theme-color" content="#0C513A" media="(prefers-color-scheme: light)">
+    <meta name="theme-color" content="#7c8663" media="(prefers-color-scheme: dark)">
     <title>Ian Quinn, Creative Lead • Communication Design • UI • UX • Front-end</title>
     <link rel="shortcut icon" type="image/x-icon" href="img/iqcreative-green.svg">
     <link rel="apple-touch-icon" type="image/x-icon" href="img/iqcreative-green.svg">
@@ -39,7 +39,13 @@
     </div>
 
     <header class="sticky">
-      <img src="img/iqcreative-neutral.svg" alt="Ian Quinn Logo" />
+      <!-- <img src="img/iqcreative-neutral.svg" alt="Ian Quinn Logo" /> -->
+      <div class="hide--light">
+        <model-viewer src="models/iqcreative_logo_3d_dark.gltf" alt="IQ Creative Logo 3D Dark" poster="models/iqcreative_logo_3d_dark@2x.png" auto-rotate rotation-per-second="45deg" shadow-intensity="0" shadow-softness="1" exposure="0.5" loading="lazy" camera-orbit="0deg 90deg 1m" ios-src="models/iqcreative_logo_3d_dark.gltf"></model-viewer>
+      </div>
+      <div class="hide--dark">
+        <model-viewer src="models/iqcreative_logo_3d_light.gltf" alt="IQ Creative Logo 3D Light" poster="models/iqcreative_logo_3d_light@2x.png" auto-rotate rotation-per-second="45deg" shadow-intensity="0" shadow-softness="1" loading="lazy" camera-orbit="0deg 90deg 1m" ios-src="models/iqcreative_logo_3d_light.gltf"></model-viewer>
+      </div>
       <h1>Ian Quinn</h1>
       <h2>Creative Lead</h2>
       <nav class="contact">
@@ -47,7 +53,9 @@
         <a href="mailto:ian@iqcreative.ca" rel="noopener" target="_blank">Email</a>
       </nav>
       <p>Great Lakes born. West coast adopted. Long-time musician. Photography enthusiast. Life-long gamer.</p>
-      <hr class="hide--desktop" />
+      <hr/>
+      <p class="acknowledgement">I respectfully acknowledge that the land we gather on is on the Unceded Traditional Territory of the <a href="https://komoks.ca/" rel="noopener" target="_blank">K’ómoks First Nation</a>, the traditional keepers of this land.</p>
+      
     </header>
     
     <main>
@@ -215,13 +223,7 @@
     </main>
     
     <aside class="sticky">
-      <article>
-        <model-viewer src="models/ian.vox.gltf" alt="Voxel Ian" poster="models/ian.vox.poster.png" auto-rotate rotation-per-second="45deg" shadow-intensity="1" shadow-softness="1" loading="lazy" camera-orbit="0deg 80deg 8m" ios-src="models/ian.vox.gltf"></model-viewer>
-      </article>
-      <hr/>
-      <article>
-        <p>I respectfully acknowledge that the land we gather on is on the Unceded Traditional Territory of the <a href="https://komoks.ca/" rel="noopener" target="_blank">K’ómoks First Nation</a>, the traditional keepers of this land.</p>
-      </article>
+      
     </aside>
     
     <footer>
