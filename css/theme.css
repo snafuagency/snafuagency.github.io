@@ -26,6 +26,13 @@ html {
     padding: 0;
     width: auto;
     height: auto;
+    scroll-behavior: smooth;
+}
+:target:before {
+    content: "";
+    display: block;
+    height: 6.4rem;
+    margin: -6.4rem 0 0;
 }
 
 body {
@@ -148,12 +155,12 @@ nav a{
     margin: 0 0.32rem 0.64rem 0;
     padding: 16px 16px 4px 6px;
     border: 2px solid var(--green);
-    border-radius: 10px;
+    border-radius: 6px;
     width: auto;
     min-width: 8rem;
     /* font-family: 'Source Code Pro', monospace; */
 	font-size: 1.4rem; 
-    font-weight: 400;
+    font-weight: 700;
     letter-spacing: 0.064rem;
     text-align: left;
     text-decoration: none;
@@ -182,7 +189,7 @@ nav a:focus{
 
 nav.online a{
     border: 2px solid var(--blue);
-    border-radius: 8px;
+    border-radius: 4px;
     padding: 12px 24px 4px 6px;
     width: auto;
     min-width: initial;
@@ -199,7 +206,7 @@ nav.online a:focus{
 
 nav.page a{
     border: 2px solid var(--light);
-    border-radius: 8px;
+    border-radius: 4px;
     padding: 12px 24px 4px 6px;
     width: auto;
     min-width: initial;
@@ -242,7 +249,7 @@ main section{
 }
 
 main article{
-    margin: auto auto 0.48rem;
+    margin: auto auto 0.24rem;
     padding: 1rem; 
     /* border: 2px solid var(--green); */
     border-radius: 0;
@@ -363,10 +370,10 @@ footer{
 h1{
     margin: 2.4rem 0;
     font-family: 'Barlow Condensed', sans-serif;
-    font-size: 4rem;
-    font-weight: 200;
+    font-size: 3.6rem;
+    font-weight: 700;
     line-height: 80%;
-    letter-spacing: -0.16rem;
+    letter-spacing: 0.08rem;
     /* word-spacing: -0.64rem; */
     text-transform: uppercase;
     /* color: var(--light); */
@@ -374,8 +381,8 @@ h1{
 @media screen and (min-width: 1366px) {
 	h1{
         margin: 3.2rem 0 2.4rem;
-        font-size: 6.4rem;
-        letter-spacing: -0.32rem;
+        font-size: 4.8rem;
+        /* letter-spacing: 0.08rem; */
 	}
 }
 
@@ -385,7 +392,7 @@ h2{
     padding: 0 0 0.96rem;
     font-family: 'Barlow Condensed', sans-serif;
 	font-size: 2.4rem;
-    font-weight: 700;
+    font-weight: 400;
 	line-height: 96%;
     text-transform: uppercase;
     /* color: var(--orange); */
