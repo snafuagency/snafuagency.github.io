@@ -1,6 +1,6 @@
-// © 2021, Ian Quinn
+// © 2023, Ian Quinn
 
-// Copyright year
+// Update copyright year after fallback
 const copyright_year = document.querySelector('#copyright_year');
 const copyright_options = { 
 	year: 'numeric'
@@ -21,8 +21,6 @@ function moveMouse(e){
 	mouse_y_coord.textContent = y;
 };
 document.addEventListener("mousemove", moveMouse, {passive: true})
-
-
 
 // Clock
 const clock_num = document.querySelector('.clock__num');
