@@ -691,7 +691,7 @@ nav a:active{
 
 nav.page{
     grid-area: page;
-    margin: 2.4rem 0;
+    margin: 3.2rem 0 0;
 }
 @media screen and (min-width: 1024px) {
     nav.page{
@@ -861,9 +861,9 @@ header .header-inner{
         'contact'
         ;
         align-content: start;
+        justify-content: start;
         height: auto;
     }
-    
     header .header-inner{
         position: sticky;
         top: 8rem;
