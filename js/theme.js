@@ -2,14 +2,16 @@
 
 // Toggle Mobile Nav Menu
 const navToggle = document.querySelector(".nav-wrapper-toggle");
+const navToggleIcon = document.querySelector(".nav-wrapper-toggle__icon");
 const nav = document.querySelector(".nav-wrapper");
 
 navToggle.addEventListener("click", function() {
-	if (this.innerHTML === "Menu") {
-		this.innerHTML = "Exit";
-	  } else {
-		this.innerHTML = "Menu";
-	  }
+	// if (this.innerHTML === "Menu") {
+	// 	this.innerHTML = "Exit";
+	//   } else {
+	// 	this.innerHTML = "Menu";
+	//   }
+	navToggleIcon.classList.toggle("open");
 	nav.classList.toggle("nav-wrapper--hidden");
 });
 
