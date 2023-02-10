@@ -24,7 +24,7 @@ copyright_year.textContent = new Date().toLocaleDateString("en-CA", copyright_op
 // const mouse = document.querySelector('.crosshair--mouse');
 const mouse_x_coord = document.querySelector('.mouse-coordinates__x');
 const mouse_y_coord = document.querySelector('.mouse-coordinates__y');
-// const hover = "hover";
+const hover = "hover";
 function moveMouse(e){
     const x = e.clientX;
     const y = e.clientY;
