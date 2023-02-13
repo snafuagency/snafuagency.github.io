@@ -1149,8 +1149,8 @@ aside .bio-image{
     display: inline-block;
     margin: 0 auto 1rem;
     border-radius: 8px;
-    width: 128px;
-    height: 128px;
+    width: 256px;
+    height: 256px;
     
 }
 aside .bio{
