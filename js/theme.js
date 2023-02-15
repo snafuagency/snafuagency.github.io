@@ -1,5 +1,6 @@
 // © 2023, Ian Quinn
 
+
 // Toggle Mobile Nav Menu
 const navToggle = document.querySelector(".nav-wrapper-toggle");
 const navToggleIcon = document.querySelector(".nav-wrapper-toggle__icon");
@@ -24,18 +25,18 @@ copyright_year.textContent = new Date().toLocaleDateString("en-CA", copyright_op
 
 // Mouse Cusor inspired by https://github.com/ephraimilunga/fylo_challenge/blob/master/js/main.js
 // const mouse = document.querySelector('.crosshair--mouse');
-const mouse_x_coord = document.querySelector('.mouse-coordinates__x');
-const mouse_y_coord = document.querySelector('.mouse-coordinates__y');
-const hover = "hover";
-function moveMouse(e){
-    const x = e.clientX;
-    const y = e.clientY;
+// const mouse_x_coord = document.querySelector('.mouse-coordinates__x');
+// const mouse_y_coord = document.querySelector('.mouse-coordinates__y');
+// const hover = "hover";
+// function moveMouse(e){
+    // const x = e.clientX;
+    // const y = e.clientY;
     // mouse.style.top = (y - 36) + 'px';
     // mouse.style.left = (x - 35) + 'px';
-	mouse_x_coord.textContent = x;
-	mouse_y_coord.textContent = y;
-};
-document.addEventListener("mousemove", moveMouse, {passive: true})
+	// mouse_x_coord.textContent = x;
+	// mouse_y_coord.textContent = y;
+// };
+// document.addEventListener("mousemove", moveMouse, {passive: true})
 
 // Clock
 const clock_num = document.querySelector('.clock__num');
