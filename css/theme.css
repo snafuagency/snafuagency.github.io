@@ -395,7 +395,7 @@ p a:focus{
 }
 @media (prefers-color-scheme: dark) {
     .nav-wrapper{
-        background-color: rgba(40,36,40, 0.88);
+        background-color: rgba(28,24,28, 0.88);
         background-image: url(../img/bg-dot-grid-dark.svg);
     }
 }
