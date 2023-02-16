@@ -161,7 +161,7 @@ h2{
 h3{
     margin: 2rem 0 1rem;
     font-family: 'Barlow', sans-serif;
-    font-size: 1.4rem;
+    font-size: 1.6rem;
     font-weight: 400;
     letter-spacing: 0.08rem;
     text-transform: uppercase;
@@ -249,7 +249,7 @@ ol li::before{
     left: -2.4rem;
     width: 2rem;
     font-family: 'Barlow', sans-serif;
-	font-size: 1.4rem;
+	font-size: 1.6rem;
     font-weight: 700;
     color: var(--foreground);
     text-align: center;
@@ -871,8 +871,12 @@ main section article.article-grid ol li h3{
     }
 }
 
-section.about{
+
+section{
     padding: 8rem 0 0;
+}
+section.about{
+    /* padding: 8rem 0 0; */
 }
 
 
