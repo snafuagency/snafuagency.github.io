@@ -17,12 +17,11 @@
 /* Color */ 
 :root{
     --light: #eeeee8;
-    /* --dark: #282428; */
     --dark: #1c181c;
-    --red: #b00c0f;
     --neutral: #808080;
-    --primary: #0C513A;
-    --orange: #ffb500;
+    /* --primary: #0C513A; */
+    --primary: #0013BA;
+    --debug: #ffb500;
 
     --foreground: var(--dark);
     --background: var(--light);
@@ -30,7 +29,9 @@
 
 @media (prefers-color-scheme: dark) {
     :root{
-        --primary: #B4C192; 
+        /* --primary: #B4C192;  */
+        /* --primary: #C4CB44;  */
+        --primary: #D7DF40; 
         --foreground: var(--light);
         --background: var(--dark);
     }
