@@ -19,7 +19,7 @@
     --light: #eeeee8;
     --dark: #1c181c;
     --neutral: #808080;
-    --primary: #0C513A;
+    /* --primary: #0C513A; */
     /* Pantone Blue 072 C*/
     --primary: #10069F; 
     --debug: #ffb500;
@@ -33,8 +33,7 @@
 @media (prefers-color-scheme: dark) {
     :root{
         /* --primary: #B4C192;  */
-        /* --primary: #C4CB44;  */
-        /* Pantone 394 C */
+        /* Pantone ??? */
         /* --primary: #EDE939;  */
         --primary: #8ee24a; 
         --foreground: var(--light);
@@ -1015,8 +1014,8 @@ footer{
     filter: blur(16px);
     transform: translateY(4rem);
     transition: opacity 1s ease, filter 0.5s ease, transform 0.5s ease;
-    transition-delay: 0.5s;
-    /* transition-delay: calc(1s * var(--order)); */
+    /* transition-delay: 0.5s; */
+    transition-delay: calc(2s * var(--order));
     
 }
 .reveal-on-scroll.reveal{ 
