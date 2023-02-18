@@ -534,8 +534,10 @@ nav.page a{
     width: auto;
     min-width: 128px;
     max-width: 200px;
+    font-family: 'Space Mono', monospace; 
     font-size: 1rem;
     text-align: center;
+    text-transform: capitalize;
 }
 nav.page a:hover,
 nav.page a:focus{
@@ -583,8 +585,10 @@ nav.online a{
     width: auto; 
     min-width: 128px;
     max-width: 200px;
+    font-family: 'Space Mono', monospace; 
     font-size: 0.8rem;
     text-align: center;
+    text-transform: lowercase;
 }
 nav.online a:hover,
 nav.online a:focus{
