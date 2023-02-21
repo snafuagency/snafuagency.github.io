@@ -35,7 +35,8 @@
         /* --primary: #B4C192;  */
         /* Pantone ??? */
         /* --primary: #EDE939;  */
-        --primary: #8ee24a; 
+        /* --primary: #8ee24a;  */
+        --primary: #C2E34B; 
         --foreground: var(--light);
         --background: var(--dark);
     }
@@ -132,7 +133,7 @@ h1{
     margin: 0;
     font-family: 'Barlow', sans-serif;
     font-size: 4rem;
-    font-weight: 400;
+    font-weight: 200;
     line-height: 120%;
     /* letter-spacing: 0.024rem; */
     text-transform: uppercase;
@@ -162,18 +163,18 @@ h2{
 }
 @media screen and (min-width: 1366px) {
 	h2{
-		font-size:3.2rem;
+		font-size: 3.2rem;
 	}
 }
 
 
 h3{
     margin: 2rem 0 1rem;
-    font-family: 'Barlow', sans-serif;
+    /* font-family: 'Barlow', sans-serif; */
     font-size: 1.6rem;
     font-weight: 400;
-    letter-spacing: 0.08rem;
-    text-transform: uppercase;
+    /* letter-spacing: 0.048rem; */
+    /* text-transform: uppercase; */
     color: var(--primary);
 }
 
@@ -263,7 +264,7 @@ ol li::before{
     content: counter(count, decimal);
     display: inline-block;
     position: absolute;
-    top: 0;
+    top: 0.24rem;
     left: -2.4rem;
     width: 2rem;
     font-family: 'Barlow', sans-serif;
@@ -352,7 +353,7 @@ p a:focus{
     
     z-index: 999;
     overflow-y: auto;
-    border-top: 2px solid var(--primary);
+    border-top: 1px solid var(--primary);
     padding: 0 0 2rem;
     bottom: 0;
     width: 100%;
@@ -385,7 +386,7 @@ p a:focus{
         ;
         align-content: center;
         border-top: 0;
-        border-bottom: 2px solid var(--primary);
+        border-bottom: 1px solid var(--primary);
         padding: 0;
         top: 0;
         left: initial;
