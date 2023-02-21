@@ -36,7 +36,7 @@
         /* Pantone ??? */
         /* --primary: #EDE939;  */
         /* --primary: #8ee24a;  */
-        --primary: #C2E34B; 
+        --primary: #c2e34b; 
         --foreground: var(--light);
         --background: var(--dark);
     }
@@ -94,6 +94,7 @@ body {
     background-color: var(--background);
     background-image: url(../img/bg-dot-grid-light.svg);
     background-size: 256px;
+    -webkit-background-attachment: fixed;
     background-attachment: fixed;
     background-repeat: repeat;
     background-blend-mode: initial;
@@ -171,7 +172,7 @@ h2{
 h3{
     margin: 2rem 0 1rem;
     /* font-family: 'Barlow', sans-serif; */
-    font-size: 1.6rem;
+    font-size: 1.2rem;
     font-weight: 400;
     /* letter-spacing: 0.048rem; */
     /* text-transform: uppercase; */
@@ -264,11 +265,11 @@ ol li::before{
     content: counter(count, decimal);
     display: inline-block;
     position: absolute;
-    top: 0.24rem;
+    top: 0.12rem;
     left: -2.4rem;
     width: 2rem;
     font-family: 'Barlow', sans-serif;
-	font-size: 1.6rem;
+	font-size: 1.2rem;
     font-weight: 700;
     color: var(--foreground);
     text-align: center;
@@ -315,6 +316,7 @@ p a{
     text-decoration: underline;
     text-transform: none;
     color: var(--primary);
+    transition: background-color 0.125s linear, color 0.125s linear;
 }
 
 p a:hover,
@@ -359,20 +361,20 @@ p a:focus{
     width: 100%;
     height: 56vh;
 
-    background-color: rgba(238,238,232, 0.88);
+    background-color: rgba(238,238,232, 0.64);
     background-image: url(../img/bg-dot-grid-light.svg);
     background-size: 256px;
     background-attachment: fixed;
     background-repeat: repeat;
     background-blend-mode: initial;
-    backdrop-filter: blur(3px);
-    -webkit-backdrop-filter: blur(3px);
+    backdrop-filter: blur(8px);
+    -webkit-backdrop-filter: blur(8px);
     transition: height 0.25s linear;
 }
 .nav-wrapper.nav-wrapper--hidden{
     overflow-y: hidden;
     padding: 0;
-    height: 0vh;
+    height: 0svh;
 }
 @media screen and (min-width: 1024px) {
     .nav-wrapper{
@@ -394,7 +396,7 @@ p a:focus{
         right: initial;  
         width: auto; 
         height: auto;
-        min-height: 4rem; 
+        min-height: 3.2rem; 
         transform: none; 
     }
     .nav-wrapper.nav-wrapper--hidden{
@@ -413,7 +415,7 @@ p a:focus{
 }
 @media (prefers-color-scheme: dark) {
     .nav-wrapper{
-        background-color: rgba(28,24,28, 0.88);
+        background-color: rgba(28,24,28, 0.64);
         background-image: url(../img/bg-dot-grid-dark.svg);
     }
 }
@@ -505,12 +507,14 @@ nav a{
     text-decoration: none;
     text-transform: uppercase;
     color: var(--foreground);
+    transition: background-color 0.125s linear, color 0.125s linear;
 }
 nav a:hover,
 nav a:focus{
     border-color: var(--primary);
     color: var(--background);
     background: var(--primary);
+    
 }
 nav a:active{
     border-color: var(--primary);
@@ -642,7 +646,7 @@ header{
     align-content: center;
     z-index: 1;
     width: auto;
-    height: 80vh;
+    height: 88svh;
 }
 header .header-inner{
     display: grid;
@@ -687,7 +691,7 @@ header .logo{
 }
 @media screen and (min-width: 1024px) {
 	header .logo{
-        margin: 0 auto -3.2rem;
+        margin: 0 auto -3.2rem; 
     }
 }
 @media screen and (min-width: 1366px) {
@@ -807,7 +811,13 @@ main section{
         'article'
     ;
     justify-content: start;
-    padding: 12rem 0 0;
+    padding: 8rem 0 0;
+}
+main section:first-child{
+    padding: 0;
+}
+main section:last-child{
+    margin: auto auto 8rem; 
 }
 @media screen and (min-width: 1366px) {
 	main section{
@@ -821,9 +831,7 @@ main section{
         ;
     }
 }
-main section:last-child{
-    margin: auto auto 6.4rem; 
-}
+
 
 main section h1{
     grid-area: heading;
