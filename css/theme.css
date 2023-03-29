@@ -19,7 +19,6 @@
     --light: #eeeee8;
     --dark: #1c181c;
     --neutral: #808080;
-    /* --primary: #0C513A; */
     /* Pantone Blue 072 C*/
     --primary: #10069F; 
     --debug: #FFA300;
@@ -32,16 +31,8 @@
 
 @media (prefers-color-scheme: dark) {
     :root{
-        /* --primary: #B4C192;  */
-        
-        /* --primary: #EDE939;  */
-        /* --primary: #8ee24a;  */
-        /* --primary: #c2e34b;  */
-        /* --primary: #FFD100;  */
-        /* Pantone 107 C */
-        /* --primary: #FBE122;  */
         /* Pantone 394 C */
-        --primary: #ede939; 
+        --primary: #EDE939; 
         --foreground: var(--light);
         --background: var(--dark);
     }
@@ -299,6 +290,11 @@ small{
     font-weight: 400;
     text-transform: uppercase;
 	color: var(--neutral);
+}
+
+.hacked{
+    font-family: 'Space Mono', monospace;
+    font-weight: 700;
 }
 
 /* Mouse Coordinates */
@@ -726,6 +722,9 @@ header h1{
     text-transform: uppercase;
     color: var(--foreground);
 }
+
+
+
 @media screen and (min-width: 1024px) {
 	header h1{
 		/* font-size: 6.4rem; */

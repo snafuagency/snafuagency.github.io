@@ -34,6 +34,38 @@ const observer = new IntersectionObserver((entries) => {
 const revealOnScroll = document.querySelectorAll('.reveal-on-scroll');
 revealOnScroll.forEach((el) => observer.observe(el));  
 
+
+
+const letters = "!@#$%^&*()_+[]{}|,.<>/?~`?ABCDEFGHIJKLMNOPQRSTUVWXYZ1234567890";
+
+let interval = null;
+
+document.querySelector("span.hacked").onmouseover = event => {  
+  let iteration = 0;
+  
+  clearInterval(interval);
+  
+  interval = setInterval(() => {
+    event.target.innerText = event.target.innerText
+      .split("")
+      .map((letter, index) => {
+        if(index < iteration) {
+          return event.target.dataset.value[index];
+        }
+      
+        return letters[Math.floor(Math.random() * 62)]
+      })
+      .join("");
+    
+    if(iteration >= event.target.dataset.value.length){ 
+      clearInterval(interval);
+    }
+    
+    iteration += 1 / 3;
+  }, 64);
+}
+
+
 // Mouse Cusor inspired by https://github.com/ephraimilunga/fylo_challenge/blob/master/js/main.js
 // const mouse = document.querySelector('.crosshair--mouse');
 // const mouse_x_coord = document.querySelector('.mouse-coordinates__x');
