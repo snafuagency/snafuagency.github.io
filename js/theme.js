@@ -41,7 +41,7 @@ const characters = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz12345678
 let interval = null;
 
 hacked_word.onmouseover = event => {  
-  let iteration = -1;
+  let iteration = -4;
   
   clearInterval(interval);
   
@@ -62,7 +62,7 @@ hacked_word.onmouseover = event => {
     }
     
     iteration += 1 / 4;
-  }, 16);
+  }, 32);
 }
 
 

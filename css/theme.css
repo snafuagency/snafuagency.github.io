@@ -19,20 +19,16 @@
     --light: #eeeee8;
     --dark: #1c181c;
     --neutral: #808080;
-    /* Pantone Blue 072 C*/
-    --primary: #10069F; 
+    --primary: #10069F; /* Pantone Blue 072 C*/
     --debug: #FFA300;
-
     --foreground: var(--dark);
     --background: var(--light);
-
     --reveal-order: 1;
 }
 
 @media (prefers-color-scheme: dark) {
     :root{
-        /* Pantone 394 C */
-        --primary: #EDE939; 
+        --primary: #EDE939; /* Pantone 394 C */
         --foreground: var(--light);
         --background: var(--dark);
     }
@@ -289,6 +285,7 @@ small{
 }
 
 .about h1{
+    font-family: 'Space Mono', monospace;
     font-weight: 200;
     text-transform: uppercase;
     color: var(--foreground);
