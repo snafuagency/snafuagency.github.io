@@ -35,25 +35,25 @@ const revealOnScroll = document.querySelectorAll('.reveal-on-scroll');
 revealOnScroll.forEach((el) => observer.observe(el));  
 
 
-
-const letters = "!@#$%^&*()_+[]{}|,.<>/?~`?ABCDEFGHIJKLMNOPQRSTUVWXYZ1234567890";
+const hacked_word = document.querySelector('span.hacked');
+const characters = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz1234567890!@#$%^&*()_+[]{}|,.<>/?~`?";
 
 let interval = null;
 
-document.querySelector("span.hacked").onmouseover = event => {  
-  let iteration = 0;
+hacked_word.onmouseover = event => {  
+  let iteration = -1;
   
   clearInterval(interval);
   
   interval = setInterval(() => {
     event.target.innerText = event.target.innerText
       .split("")
-      .map((letter, index) => {
+      .map((character, index) => {
         if(index < iteration) {
           return event.target.dataset.value[index];
         }
       
-        return letters[Math.floor(Math.random() * 62)]
+        return characters[Math.floor(Math.random() * 88)]
       })
       .join("");
     
@@ -61,8 +61,8 @@ document.querySelector("span.hacked").onmouseover = event => {
       clearInterval(interval);
     }
     
-    iteration += 1 / 3;
-  }, 64);
+    iteration += 1 / 4;
+  }, 16);
 }
 
 
