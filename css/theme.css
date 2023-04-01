@@ -354,11 +354,12 @@ p a:focus{
     
     z-index: 999;
     overflow-y: auto;
-    border-top: 1px solid var(--neutral);
+    border-top: 4px solid var(--primary);
     padding: 0 0 2rem;
     bottom: 0;
     width: 100%;
     height: 56vh;
+    height: 100svh;
     background-color: rgba(238,238,232, 0.64);
     background-image: radial-gradient(rgba(0,0,0,0.24) 8%, transparent 0%);
     background-position: 0;
@@ -368,7 +369,7 @@ p a:focus{
     background-blend-mode: initial;
     backdrop-filter: blur(8px);
     -webkit-backdrop-filter: blur(8px);
-    transition: height 0.25s linear;
+    transition: height 0.25s ease-in-out;
 }
 .nav-wrapper.nav-wrapper--hidden{
     overflow-y: hidden;
