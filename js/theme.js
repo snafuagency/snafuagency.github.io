@@ -35,6 +35,7 @@ const revealOnScroll = document.querySelectorAll('.reveal-on-scroll');
 revealOnScroll.forEach((el) => observer.observe(el));  
 
 
+// hacked text effect
 const hacked_word = document.querySelector('span.hacked');
 const characters = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz1234567890!@#$%^&*()_+[]{}|,.<>/?~`?";
 
@@ -67,19 +68,19 @@ hacked_word.onmouseover = event => {
 
 
 // Mouse Cusor inspired by https://github.com/ephraimilunga/fylo_challenge/blob/master/js/main.js
-// const mouse = document.querySelector('.crosshair--mouse');
+//const mouse = document.querySelector('.crosshair--mouse');
 // const mouse_x_coord = document.querySelector('.mouse-coordinates__x');
 // const mouse_y_coord = document.querySelector('.mouse-coordinates__y');
 // const hover = "hover";
 // function moveMouse(e){
-    // const x = e.clientX;
-    // const y = e.clientY;
-    // mouse.style.top = (y - 36) + 'px';
-    // mouse.style.left = (x - 35) + 'px';
-	// mouse_x_coord.textContent = x;
-	// mouse_y_coord.textContent = y;
+//     const x = e.clientX;
+//     const y = e.clientY;
+//     //mouse.style.top = (y - 36) + 'px';
+//     //mouse.style.left = (x - 35) + 'px';
+// 	mouse_x_coord.textContent = x;
+// 	mouse_y_coord.textContent = y;
 // };
-// document.addEventListener("mousemove", moveMouse, {passive: true})
+// document.addEventListener("mousemove", moveMouse, {passive: true}) 
 
 // Clock
 // const clock_num = document.querySelector('.clock__num');
