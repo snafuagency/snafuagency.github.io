@@ -388,30 +388,31 @@ p a:focus{
     flex-direction: column;
     justify-content: center;
     z-index: 9999;
-    margin: 0;
-    padding: 4px;
-    border: 2px solid var(--primary);
-    border-radius: 64px;
+    padding: 0.5rem;
+    border: 0.125rem solid var(--primary);
+    border-radius: 4rem;
     bottom: 2rem;
     left: 50%;
     transform: translateX(-50%);
-    width: 2rem;
-    height: 2rem;
+    width: 2.5rem;
+    height: 2.5rem;
     background: var(--background);
+    transition: all 0.125s linear;
 }
 .nav-wrapper-toggle:hover,
 .nav-wrapper-toggle:focus{
-    border-color: var(--primary);
+    border-color: var(--background);
     background: var(--primary);
 }
 .nav-wrapper-toggle__icon{
     position: relative;
     display: inline-block;
-    border-radius: 4px;
+    border-radius: 0.25rem;
     width: 100%;
-    height: 2px;
+    height: 0.125rem;
     background: var(--primary);
-    transition: background-color 0.25s linear;
+    transform-origin: center;
+    transition: background-color 0.125s ease;
 }
 .nav-wrapper-toggle__icon::before,
 .nav-wrapper-toggle__icon::after {
@@ -421,9 +422,9 @@ p a:focus{
     border-radius: 4px;
     left:0;
     width: 100%;
-    height: 2px;
+    height: 0.125rem;
     background: var(--primary);
-    transition: all 0.25s linear;
+    transition: all 0.125s ease;
 }
 .nav-wrapper-toggle__icon::before{
     top: -6px;
