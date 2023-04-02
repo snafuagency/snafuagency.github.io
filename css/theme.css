@@ -633,11 +633,8 @@ header{
     z-index: 1;
     width: auto;
     height: 100svh;
-
     background: var(--primary);
-
-    background-image: radial-gradient(rgba(255,255,255,0.16) 8%, transparent 8%);
-    
+    background-image: radial-gradient(rgba(255,255,255,0.24) 8%, transparent 8%);
     background-position: 0;
     background-size: 0.5rem 0.5rem;
     -webkit-background-attachment: fixed;
@@ -646,7 +643,7 @@ header{
 }
 @media (prefers-color-scheme: dark) {
     header {
-        background-image: radial-gradient(rgba(0,0,0,0.24) 8%, transparent 0%);
+        background-image: radial-gradient(rgba(0,0,0,0.32) 8%, transparent 0%);
      }
 }
 header .header-inner{
