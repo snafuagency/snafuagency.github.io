@@ -19,7 +19,7 @@
     --light: #eeeee8;
     --dark: #1c181c;
     --neutral: #808080;
-    --primary: #10069F; /* Pantone Blue 072 C*/
+    --primary: hsl(244, 93%, 32%); /* Pantone Blue 072 C | #10069F */
     --debug: #FFA300;
     --foreground: var(--dark);
     --background: var(--light);
@@ -28,7 +28,7 @@
 
 @media (prefers-color-scheme: dark) {
     :root{
-        --primary: #EDE939; /* Pantone 394 C */
+        --primary: hsl(59, 83%, 58%); /* Pantone 394 C | #EDE939 */
         --foreground: var(--light);
         --background: var(--dark);
     }
@@ -710,11 +710,11 @@ header .logo{
 header h1{
     grid-area: name;
     margin: 0;
-    /* font-family: 'Space Mono', monospace; */
-    font-size: 2rem;
-    font-weight: 700;
+    font-family: 'Barlow Condensed', sans-serif;
+    font-size: 4rem;
+    font-weight: 900;
     line-height: 80%;
-    letter-spacing: 0.125rem;
+    /* letter-spacing: 0.125rem; */
     text-align: center;
     text-transform: uppercase;
     color: var(--background);
@@ -734,6 +734,7 @@ header h2{
     font-size: 1rem;
     font-weight: 400;
     line-height: 120%;
+    letter-spacing: 0.25rem;
     text-align: center;
     color: var(--background);
 }
@@ -974,6 +975,7 @@ aside .bio-image-wrap{
     width: 100%;
     max-width: 12rem;
     aspect-ratio: 1 / 1.33;
+    isolation: isolate;
 }
 aside .bio-image-inner{
     display: inline-block;
@@ -990,12 +992,17 @@ aside .bio-image{
     display: inline-block;
     position: absolute;
     bottom: -1rem;
-    left: 0.5rem;
+    left: 1.5rem;
     width: 100%; 
     max-width: 12rem;
-
-    
+    transition: transform 0.5s ease;
 }
+aside .bio-image-wrap:hover .bio-image{
+    transform: scale(1.08);
+}
+
+
+
 aside .bio{
     grid-area: bio;
     margin: 0 0 1rem;
