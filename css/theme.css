@@ -986,7 +986,7 @@ aside .bio-image-inner{
     width: 100%;
     max-width: 12rem;
     aspect-ratio: 1;
-    box-shadow: inset 0 0 2rem rgba(0,0,0,0.32);
+    box-shadow: inset 0 0 2rem rgba(0,0,0,0.16);
 }
 aside .bio-image{
     display: inline-block;
