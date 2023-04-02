@@ -980,7 +980,8 @@ aside .bio-image-inner{
     display: inline-block;
     position: absolute;
     bottom: 0;
-    background-color: var(--primary);
+    background-color: transparent;
+    border: 0.5rem solid var(--primary);
     border-radius: 8rem;
     width: 100%;
     max-width: 12rem;
@@ -995,6 +996,20 @@ aside .bio-image{
     width: 100%; 
     max-width: 12rem;
     transition: transform 1.0s ease;
+}
+aside .bio-image-border{
+    display: inline-block;
+    position: absolute;
+    bottom: 0;
+    background-color: transparent;
+    border-bottom: 0.5rem solid var(--primary);
+    border-right: 0.5rem solid var(--primary);
+    border-left: 0.5rem solid var(--primary);
+    border-top: 0.5rem solid transparent;
+    border-radius: 8rem;
+    width: 100%;
+    max-width: 12rem;
+    aspect-ratio: 1;
 }
 aside .bio-image-wrap:hover{
     transform: scale(1.08);
