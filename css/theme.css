@@ -838,7 +838,7 @@ main section:first-child{
     /* padding: 0; */
 }
 main section:last-child{
-    margin: auto auto 8rem; 
+    /* margin: auto auto 8rem;  */
 }
 @media screen and (min-width: 1366px) {
 	main section{
@@ -945,13 +945,12 @@ hr{
 aside{
     grid-area: aside;
     grid-column: 2 / span 10;
-    grid-row: 4;
+    grid-row: 3;
 }
 @media screen and (min-width: 1024px) {
 	aside{
         grid-area: aside;
         grid-column: 2 / span 3;
-        grid-row: 3;
     }
     aside .aside-inner{
         position: sticky;
@@ -969,7 +968,7 @@ aside .bio-image-wrap{
     display: block;
     position: relative;
     overflow: hidden;
-    margin: 0 auto 1rem;
+    margin: 0 auto 2rem;
     /* background-color: var(--debug); */
     border-radius: 8rem;
     width: 100%;
@@ -985,6 +984,7 @@ aside .bio-image-inner{
     width: 100%;
     max-width: 12rem;
     aspect-ratio: 1;
+    box-shadow: inset 0 0 2rem rgba(0,0,0,0.32);
 }
 aside .bio-image{
     display: inline-block;
