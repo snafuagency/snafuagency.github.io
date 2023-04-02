@@ -464,10 +464,10 @@ nav a{
     font-family: 'Space Mono', monospace;
 	font-size: 1rem; 
     font-weight: 400; 
-    letter-spacing: 0.064rem;
+    letter-spacing: 0.025rem;
     text-align: center;
     text-decoration: none;
-    text-transform: uppercase;
+    /* text-transform: uppercase; */
     color: var(--background);
     transition: background-color 0.125s linear, color 0.125s linear;
 }
@@ -665,7 +665,7 @@ header .header-inner{
 @media screen and (min-width: 1024px) {
 	header{
         grid-area: header;
-		grid-column: 2 / span 2;
+		grid-column: 2 / span 3;
         grid-row: 2;
         grid-template-areas: 
         'logo'
@@ -683,11 +683,11 @@ header .header-inner{
         top: 8rem;
     }
 }
-/* @media screen and (min-width: 1366px) {
+@media screen and (min-width: 1366px) {
 	header{
 		grid-column: 2 / span 2;
     }
-} */
+}
 
 header .logo{
     grid-area: logo;
@@ -710,10 +710,11 @@ header .logo{
 header h1{
     grid-area: name;
     margin: 0;
+    /* font-family: 'Space Mono', monospace; */
     font-size: 2rem;
     font-weight: 700;
     line-height: 80%;
-    /* letter-spacing: 0.16rem; */
+    letter-spacing: 0.125rem;
     text-align: center;
     text-transform: uppercase;
     color: var(--background);
@@ -963,16 +964,36 @@ aside{
     }
 }
 
-aside .bio-image{
+aside .bio-image-wrap{
     grid-area: bio-image;
     display: block;
+    position: relative;
+    overflow: hidden;
     margin: 0 auto 1rem;
-    border: 2px solid var(--primary);
+    /* background-color: var(--debug); */
     border-radius: 8rem;
     width: 100%;
-    max-width: 8rem;
+    max-width: 12rem;
+    aspect-ratio: 1 / 1.33;
+}
+aside .bio-image-inner{
+    display: inline-block;
+    position: absolute;
+    bottom: 0;
+    background-color: var(--primary);
+    border-radius: 8rem;
+    width: 100%;
+    max-width: 12rem;
     aspect-ratio: 1;
-    object-fit: cover;
+}
+aside .bio-image{
+    display: inline-block;
+    position: absolute;
+    bottom: -1rem;
+    left: 0.5rem;
+    width: 100%; 
+    max-width: 12rem;
+
     
 }
 aside .bio{
