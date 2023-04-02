@@ -29,6 +29,7 @@
 @media (prefers-color-scheme: dark) {
     :root{
         --primary: hsl(59, 83%, 58%); /* Pantone 394 C | #EDE939 */
+        /* --primary: hsl(244, 93%, 32%); Pantone Blue 072 C | #10069F */
         --foreground: var(--light);
         --background: var(--dark);
     }
@@ -976,6 +977,7 @@ aside .bio-image-wrap{
     max-width: 12rem;
     aspect-ratio: 1 / 1.33;
     isolation: isolate;
+    transition: transform 0.5s ease;
 }
 aside .bio-image-inner{
     display: inline-block;
@@ -995,7 +997,10 @@ aside .bio-image{
     left: 1.5rem;
     width: 100%; 
     max-width: 12rem;
-    transition: transform 0.5s ease;
+    transition: transform 1.0s ease;
+}
+aside .bio-image-wrap:hover{
+    transform: scale(1.08);
 }
 aside .bio-image-wrap:hover .bio-image{
     transform: scale(1.08);
