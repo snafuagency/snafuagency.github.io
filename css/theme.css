@@ -253,7 +253,7 @@ small{
     transform: translate3d(2.5rem, 0, 0);
 }
 .hacked.hacking{
-    transform: translate3d(2.5rem, 0, 0);
+    /* transform: translate3d(2.5rem, 0, 0); */
 }
 
 /* Mouse Coordinates */
