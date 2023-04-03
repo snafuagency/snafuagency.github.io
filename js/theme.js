@@ -19,11 +19,10 @@ const copyright_options = {
 copyright_year.textContent = new Date().toLocaleDateString("en-CA", copyright_options);
 
 
-// Reveal on scroll inspired by  https://www.youtube.com/watch?v=T33NN_pPeNI
+// Reveal on scroll inspired by Beyond Fireship https://www.youtube.com/watch?v=T33NN_pPeNI
 
 const observer = new IntersectionObserver((entries) => {
 	entries.forEach((entry) => {
-		// console.log(entry)
 		if (entry.isIntersecting){
 			entry.target.classList.add('reveal');
 		} //else {
@@ -31,41 +30,66 @@ const observer = new IntersectionObserver((entries) => {
 		//}
 	});
 });
-const revealOnScroll = document.querySelectorAll('.reveal-on-scroll');
+const revealOnScroll = document.querySelectorAll('.ros');
 revealOnScroll.forEach((el) => observer.observe(el));  
 
 
-// hacked text effect
+// Hacked text effect inspired by Hyperplexed https://codepen.io/Hyperplexed/pen/rNrJgrd
 const hacked_word = document.querySelector('span.hacked');
-const characters = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz1234567890!@#$%^&*()_+[]{}|,.<>/?~`?";
-
+const characters = 'ABCDEFGHIJKLMNOPQRSTUVWXYZ1234567890*';
+const words = [
+        'Create;',
+        'Design;',
+        'Code;',
+        'Drum;',
+        'Game;',
+        'Dream;',
+        'Listen;',
+        'Grill;',
+        'Write;',
+        'Draw;',
+        'Build;',
+        'Read;',
+        'Eat;',
+        'Laugh;',
+        'Wake;',
+        'Walk;',
+        'Watch;'
+      ]
 let interval = null;
 
-hacked_word.onmouseover = event => {  
-  let iteration = -4;
+function hacked_text_loop() {
+  const random = Math.floor(Math.random() * words.length);
+  const new_word = words[random]
+  hacked_word.setAttribute("data-value", new_word); 
+  hacked_word.innerText = new_word;
+  
+  let iteration = -4; // changed from 0 to allow for effect om first letter to be more prominet
   
   clearInterval(interval);
   
   interval = setInterval(() => {
-    event.target.innerText = event.target.innerText
-      .split("")
+    hacked_word.classList.add('hacking');
+    hacked_word.innerText = hacked_word.innerText
+      .split('')
       .map((character, index) => {
         if(index < iteration) {
-          return event.target.dataset.value[index];
+          return hacked_word.dataset.value[index];
         }
-      
-        return characters[Math.floor(Math.random() * 88)]
+        return characters[Math.floor(Math.random() * 37)]
       })
       .join("");
     
-    if(iteration >= event.target.dataset.value.length){ 
+    if(iteration >= hacked_word.dataset.value.length){ 
+      hacked_word.classList.remove('hacking');
       clearInterval(interval);
     }
     
     iteration += 1 / 4;
-  }, 32);
+    
+  }, 24);
 }
-
+setInterval(hacked_text_loop, 4000);
 
 // Mouse Cusor inspired by https://github.com/ephraimilunga/fylo_challenge/blob/master/js/main.js
 //const mouse = document.querySelector('.crosshair--mouse');
