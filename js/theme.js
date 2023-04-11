@@ -54,7 +54,7 @@ const words = [
         'Laugh;',
         'Wake;',
         'Walk;',
-        'Watch;'
+        'Observe;'
       ]
 let interval = null;
 
