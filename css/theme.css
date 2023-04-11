@@ -19,8 +19,9 @@
     --light: #eeeee8;
     --dark: #1c181c;
     --neutral: #808080;
-    --primary: hsl(244, 93%, 32%); /* Pantone Blue 072 C | #10069F */
-    /* --primary: hsl(157, 100%, 16%); */
+    --primary: hsl(157, 100%, 16%);
+    /* Pantone Blue 072 C | #10069F */
+    --primary: hsl(244, 93%, 32%); 
     --debug: #FFA300;
     --foreground: var(--dark);
     --background: var(--light);
@@ -141,6 +142,7 @@ p{
     margin: 0 0 2rem;
     font-size: 1rem;
     line-height: 150%;
+    word-spacing: 0.125rem;
 }
 @media screen and (min-width: 1024px) {
     p{
@@ -465,14 +467,14 @@ nav a{
     border: 2px solid var(--background);
     border-radius: 4rem;
     width: auto;
-    min-width: 8rem;
-    font-family: 'Space Mono', monospace;
+    min-width: 6rem;
+    /* font-family: 'Space Mono', monospace; */
 	font-size: 1rem; 
     font-weight: 400; 
     letter-spacing: 0.025rem;
     text-align: center;
     text-decoration: none;
-    /* text-transform: uppercase; */
+    text-transform: uppercase;
     color: var(--background);
     transition: background-color 0.125s linear, color 0.125s linear;
 }
@@ -521,15 +523,8 @@ nav.page a{
     border: 0px solid var(--primary);
     border-radius: 64px;
     margin: 0 auto 0.64rem; 
-    padding: 4px 12px;
     width: auto;
-    min-width: 80px;
-    max-width: 128px;
-    font-family: 'Space Mono', monospace; 
-    font-size: 1rem;
     color: var(--forground);
-    text-align: center;
-    /* text-transform: capitalize; */
 }
 
 nav.page a:hover,
@@ -544,9 +539,9 @@ nav.page a:focus{
         display: inline-block;
         margin: 0 0 0 0;
         /* padding: 4px 24px 4px 8px; */
-        min-width: initial;
-        max-width: initial;
-        font-size: 0.8rem;
+        /* min-width: initial; */
+        /* max-width: initial; */
+        /* font-size: 0.8rem; */
     } 
     nav.page a:hover,
     nav.page a:focus{
@@ -572,25 +567,18 @@ nav.online{
 
 nav.online a{
     display: block;
-    
-    border: 0px solid var(--primary);
-    border-radius: 64px;
-    margin: 0 auto 0.64rem; 
-    padding: 8px;
+    border: 0 solid var(--primary);
+    border-radius: 4rem;
+    margin: 0 auto 0.5rem; 
+    padding: 0.5rem;
     width: auto; 
-    /* width: 24px; */
-    min-width: 32px;
-    max-width: 32px;
-    height: 32px;
-    font-family: 'Space Mono', monospace; 
-    font-size: 0.8rem;
-    text-align: center;
-    /* text-transform: lowercase; */
+    min-width: 2rem;
+    max-width: 2rem;
+    height: 2rem;
 }
 nav.online a:hover,
 nav.online a:focus{
     border-color: var(--primary);
-    /* padding: 8px; */
     color: var(--background);
     background: var(--primary);
 }
@@ -680,7 +668,8 @@ header .header-inner{
     }
     header .header-inner{
         position: sticky;
-        top: 8rem;
+        top: 50%;
+        transform: translateY(-50%);
     }
 }
 @media screen and (min-width: 1366px) {
@@ -1054,6 +1043,8 @@ aside{
         'aside-inner'
     ;
     padding: 4rem 0;
+    align-content: center;
+    justify-content: center;
     height: auto;
     background: var(--primary);
     /* background: var(--debug); */
@@ -1082,10 +1073,12 @@ aside{
 	aside{
         grid-area: aside;
         grid-column: 1 / span 4;
+        /* grid-row: 3 / 3; */
     }
     aside .aside-inner{
         position: sticky;
-        top: 8rem;
+        top: 40%;
+        transform: translateY(-50%);
     }
 }
 @media screen and (min-width: 1366px) {
@@ -1140,7 +1133,6 @@ footer{
 	grid-area: footer;
     grid-column: 2 / span 10;
     grid-row: 4;
-    
     margin: 0;
     padding: 2rem 0 6rem;
     width: auto;
@@ -1153,8 +1145,18 @@ footer{
         grid-row: 3;
         align-self: end;
         text-align: center;
-        padding: 2rem 0;
+        padding: 8rem 0 2rem;
     }
+}
+
+.footer-acknowledgement{
+    /* grid-area: aside-acknowledgement; */
+    margin: 0 0 2rem;
+    color: var(--neutral);
+}
+.footer-acknowledgement a{
+    color: var(--primary);
+    text-decoration: none;
 }
 
 
