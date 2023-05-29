@@ -1072,7 +1072,7 @@ aside{
     grid-template-areas: 
         'aside-inner'
     ;
-    padding: 4rem 0;
+    padding: 8rem 0;
     align-content: center;
     justify-content: center;
     height: auto;
