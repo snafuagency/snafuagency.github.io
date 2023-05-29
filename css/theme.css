@@ -98,7 +98,7 @@ body {
 
 h1{
     margin: 0;
-    font-size: 5rem;
+    font-size: 4rem;
     overflow-wrap:break-word;
     font-weight: 400;
     line-height: 100%;
@@ -274,6 +274,14 @@ small{
 .clock__num{
     /* display: none; */
     font-family: 'Space Mono', monospace;
+    color: var(--background);
+    text-align: center;
+}
+.om{
+    /* display: none; */
+    font-family: 'Space Mono', monospace;
+    font-size: 2rem;
+    font-weight: 900;
     color: var(--background);
     text-align: center;
 }
@@ -775,7 +783,7 @@ header nav.contact{
 }
 @media screen and (min-width: 1024px) {
 	header nav.contact{
-        display: none;
+        /* display: none; */
         grid-column-gap: 1rem;
         margin: 0;
     }
@@ -872,10 +880,10 @@ main section:last-child{
 
 
 main section h1{
-    font-family: 'Barlow Condensed', sans-serif;
     grid-area: heading;
     grid-column: 1 / span 12;
     grid-row: auto;
+    /* font-family: 'Barlow Condensed', sans-serif; */
 }
 
 main section p{
@@ -1132,7 +1140,7 @@ aside{
 .aside-heading {
     grid-area: aside-heading;
     margin: 0;
-    font-family: 'Barlow Condensed', sans-serif;
+    /* font-family: 'Barlow Condensed', sans-serif; */
     font-size: 2.5rem;
     line-height: 150%;
     text-align: left;
@@ -1249,7 +1257,7 @@ footer{
 
 .ros{
     opacity: 0;
-    filter: blur(16px);
+    filter: blur(24px);
     transform: translate3d(0rem, 0rem, 0);
     transition: opacity 1s ease, filter 0.75s ease, transform 0.5s ease;
     /* transition-delay: 0.5s; */
