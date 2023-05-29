@@ -1267,3 +1267,17 @@ footer{
         transition: none;
     }
 }
+
+/* THREE.js*/
+
+canvas{
+    display: inline-block;
+    position: fixed;
+    z-index: -1;
+    width: 24rem;
+    height: 24rem;
+    top: 50%;
+    left: 50%;
+    transform: translate3d(-50%,-50%,0);
+    /* background-color: var(--debug); */
+}

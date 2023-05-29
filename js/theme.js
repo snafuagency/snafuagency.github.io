@@ -92,32 +92,70 @@ function hacked_text_loop() {
 setInterval(hacked_text_loop, 4000);
 
 // Mouse Cusor inspired by https://github.com/ephraimilunga/fylo_challenge/blob/master/js/main.js
-const mouse = document.querySelector('.crosshair--mouse');
-const mouse_x_coord = document.querySelector('.mouse-coordinates__x');
-const mouse_y_coord = document.querySelector('.mouse-coordinates__y');
-const hover = "hover";
-function moveMouse(e){
-    const x = e.clientX;
-    const y = e.clientY;
-    //mouse.style.top = (y - 36) + 'px';
-    //mouse.style.left = (x - 35) + 'px';
-	mouse_x_coord.textContent = x;
-	mouse_y_coord.textContent = y;
-};
-document.addEventListener("mousemove", moveMouse, {passive: true}) 
+// const mouse = document.querySelector('.crosshair--mouse');
+// const mouse_x_coord = document.querySelector('.mouse-coordinates__x');
+// const mouse_y_coord = document.querySelector('.mouse-coordinates__y');
+// const hover = "hover";
+// function moveMouse(e){
+//     const x = e.clientX;
+//     const y = e.clientY;
+//     //mouse.style.top = (y - 36) + 'px';
+//     //mouse.style.left = (x - 35) + 'px';
+// 	mouse_x_coord.textContent = x;
+// 	mouse_y_coord.textContent = y;
+// };
+// document.addEventListener("mousemove", moveMouse, {passive: true}) 
 
 // Clock
-const clock_num = document.querySelector('.clock__num');
-const clock_options = { 
-	weekday: 'narrow', 
-	month: 'narrow', 
-	day: '2-digit',
-	year: '2-digit',
-	hour12: false,
-	hour: '2-digit',
-	minute: '2-digit',
-	second: '2-digit',
-	fractionalSecondDigits: 2,	
-	timeZoneName: "shortOffset"
+// const clock_num = document.querySelector('.clock__num');
+// const clock_options = { 
+// 	weekday: 'narrow', 
+// 	month: 'narrow', 
+// 	day: '2-digit',
+// 	year: '2-digit',
+// 	hour12: false,
+// 	hour: '2-digit',
+// 	minute: '2-digit',
+// 	second: '2-digit',
+// 	fractionalSecondDigits: 2,	
+// 	timeZoneName: "shortOffset"
+// }
+// setInterval(() => clock_num.textContent = new Date().toLocaleDateString("en-CA", clock_options), 10);
+
+
+//THREE.JS
+
+import * as THREE from 'three';
+
+//Setup
+const scene = new THREE.Scene();
+const camera = new THREE.PerspectiveCamera( 75, window.innerWidth / window.innerHeight, 0.1, 1000 );
+
+const renderer = new THREE.WebGLRenderer( { alpha: true } );
+renderer.setSize( window.innerWidth, window.innerHeight );
+document.body.appendChild( renderer.domElement );
+
+// Geometry
+const geometry = new THREE.BoxGeometry( 1, 1, 1 );
+
+const wireframe = new THREE.WireframeGeometry( geometry );
+
+const line = new THREE.LineSegments( wireframe );
+line.material.depthTest = false;
+line.material.opacity = 0.16;
+line.material.transparent = true;
+line.material.color.setHex(0x808080);
+
+scene.add( line );
+
+camera.position.z = 0.64;
+
+//Animate
+function animate() {
+	requestAnimationFrame( animate );
+  line.rotation.x += 0.0005;
+  line.rotation.y += 0.0005;
+	renderer.render( scene, camera );
 }
-setInterval(() => clock_num.textContent = new Date().toLocaleDateString("en-CA", clock_options), 10);
+animate();
+
