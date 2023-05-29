@@ -127,13 +127,27 @@ setInterval(() => clock_num.textContent = new Date().toLocaleDateString("en-CA",
 
 import * as THREE from 'three';
 
-//Setup
+//Setup scene
 const scene = new THREE.Scene();
-const camera = new THREE.PerspectiveCamera( 35, window.innerWidth / window.innerHeight, 0.1, 1000 );
 
-const renderer = new THREE.WebGLRenderer( { alpha: true } );
-renderer.setSize( window.innerWidth, window.innerHeight );
-document.body.appendChild( renderer.domElement );
+
+//get dimensions of wrapper
+const canvas_wrapper = document.querySelector('.threejs-wrapper');
+const viewport = {
+  width: canvas_wrapper.offsetWidth,
+  height: canvas_wrapper.offsetHeight
+}
+
+// choose canvas element to render to
+const canvas = document.querySelector('.threejs-wrapper__canvas');
+
+// set up camera
+const camera = new THREE.PerspectiveCamera( 95, viewport.width / viewport.height, 0.1, 1000 );
+
+// set up renderer
+const renderer = new THREE.WebGLRenderer( { canvas, alpha: true } );
+// const renderer = new THREE.WebGLRenderer( { canvas } );
+renderer.setSize( viewport.width , viewport.height );
 
 // Geometry
 const geometry = new THREE.BoxGeometry( 1, 1, 1 );
@@ -148,15 +162,26 @@ line.material.color.setHex(0x808080);
 
 scene.add( line );
 
-camera.position.z = 1;
+camera.position.z = 0.64;
 
-//Animate
+// Update viewport, camera and renderer sizes on window resize
+window.addEventListener('resize', () =>{
+    viewport.width = canvas_wrapper.offsetWidth;
+    viewport.height = canvas_wrapper.offsetHeight;
+    camera.updateProjectionMatrix();
+    camera.aspect = viewport.width / viewport.height;
+    renderer.setSize( viewport.width , viewport.height );
+})
+
+//Animate loop
 function animate() {
 	requestAnimationFrame( animate );
 
+  // animate cube
   line.rotation.x += 0.00125;
   line.rotation.y += 0.00125;
 	
+  // render scene
   renderer.render( scene, camera );
 }
 animate();
