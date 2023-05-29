@@ -30,8 +30,11 @@
 
 @media (prefers-color-scheme: dark) {
     :root{
-        --primary: hsl(59, 83%, 58%); /*Pantone 394 C | #EDE939 */
+        /*Pantone 394 C | #EDE939 */
+        --primary: hsl(59, 83%, 58%); 
         --primary: hsl(128, 64%, 64%);
+        /*Pantone Safety Yellow 13-0630 TN C | #EDFF00 */
+        --primary: hsl(64, 100%, 50%);
         --foreground: var(--light);
         --background: var(--dark); 
     }
