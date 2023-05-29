@@ -146,7 +146,7 @@ const camera = new THREE.PerspectiveCamera( 95, viewport.width / viewport.height
 
 // set up renderer
 const renderer = new THREE.WebGLRenderer( { canvas, alpha: true } );
-// const renderer = new THREE.WebGLRenderer( { canvas } );
+renderer.setPixelRatio(2);
 renderer.setSize( viewport.width , viewport.height );
 
 // Geometry
