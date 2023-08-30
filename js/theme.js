@@ -134,9 +134,12 @@ setInterval(() => clock_num.textContent = new Date().toLocaleDateString("en-CA",
 // import all functions
 import * as THREE from 'three';
 
+import { AsciiEffect } from 'three/addons/effects/AsciiEffect.js';
+
 // setup scene
 const scene = new THREE.Scene();
 
+let effect;
 
 // get dimensions of wrapper
 const canvas_wrapper = document.querySelector('.threejs-wrapper');
@@ -155,6 +158,12 @@ const camera = new THREE.PerspectiveCamera( 35, viewport.width / viewport.height
 const renderer = new THREE.WebGLRenderer( { canvas, alpha: true } );
 renderer.setPixelRatio(1);
 renderer.setSize( viewport.width , viewport.height );
+
+// Effects
+// effect = new AsciiEffect( renderer, ' .:-+*=%@#', { invert: true } );
+// renderer.setSize( viewport.width , viewport.height );
+// effect.domElement.style.color = 'white';
+// document.body.appendChild( effect.domElement );
 
 // set up geometry
 const geometry = new THREE.BoxGeometry( 1, 1, 1 );
@@ -195,6 +204,16 @@ function animate() {
 	
   // render scene
   renderer.render( scene, camera );
+
+  //  render();
+  
 }
+
+// function render() {
+
+//   effect.render( scene, camera );
+
+// }
+
 animate();
 

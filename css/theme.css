@@ -16,14 +16,14 @@
 
 /* Color */ 
 :root{
-    --light: #eeeee8;
-    --dark: #1c181c;
-    --neutral: #808080;
-    --primary: hsl(157, 100%, 16%);
+
+    --light: hsl(64, 16%, 88%);
+    --dark: hsl(244, 8%, 16%);
+    --neutral: hsl(0, 0%, 50%);
     /* Pantone Blue 072 C | #10069F */
     --primary: hsl(244, 93%, 32%);
-    /* --primary: hsl(240, 100%, 64%); */
-    --debug: #FFA300;
+    --primary: hsl(240, 100%, 60%);
+    --debug: hsl(32, 100%, 50%);
     --foreground: var(--dark);
     --background: var(--light);
     --reveal-order: 1;
@@ -33,7 +33,7 @@
     :root{
         /*Pantone Safety Yellow 13-0630 TN C | #EDFF00 */
         --primary: hsl(64, 100%, 50%);
-        /* --primary: hsl(220, 64%, 64%); */
+        /* --primary: hsl(240, 100%, 64%); */
         --foreground: var(--light);
         --background: var(--dark); 
     }
@@ -377,7 +377,7 @@ p a:focus{
     width: 100%;
     height: 56vh;
     height: 100svh;
-    background-color: rgba(255,255,255, 0.64);
+    background-color: rgba(229, 229, 220, 0.64);
     /* background-image: radial-gradient(rgba(0,0,0,0.24) 8%, transparent 0%); */
     /* background-position: 0; */
     /* background-size: 8px 8px; */
@@ -431,7 +431,7 @@ p a:focus{
 }
 @media (prefers-color-scheme: dark) {
     .nav-wrapper{
-        background-color: rgba(28,24,28, 0.64);
+        background-color: rgba(38, 38, 44, 0.64);
         /* background-image: radial-gradient(rgba(255,255,255,0.16) 8%, transparent 0%); */
 
         /* background-color: rgba(238,238,232, 0.64); */
