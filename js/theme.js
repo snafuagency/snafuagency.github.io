@@ -38,23 +38,29 @@ revealOnScroll.forEach((el) => observer.observe(el));
 const hacked_word = document.querySelector('span.hacked');
 const characters = 'ABCDEFGHIJKLMNOPQRSTUVWXYZ1234567890*';
 const words = [
-        'Create;',
-        'Design;',
-        'Code;',
-        'Drum;',
-        'Game;',
-        'Dream;',
-        'Listen;',
-        'Grill;',
-        'Write;',
-        'Draw;',
-        'Build;',
-        'Read;',
-        'Eat;',
-        'Laugh;',
-        'Wake;',
-        'Walk;',
-        'Observe;'
+        'create.',
+        'design.',
+        'code.',
+        'drum.',
+        'arrange.',
+        'compose.',
+        'mix.',
+        'master.',
+        'game.',
+        'dream.',
+        'listen.',
+        'source.',
+        'write.',
+        'draw.',
+        'build.',
+        'read.',
+        'eat.',
+        'run.',
+        'rebuild.',
+        'wake.',
+        'rest.',
+        'walk.',
+        'observe.'
       ]
 let interval = null;
 
@@ -125,13 +131,14 @@ setInterval(() => clock_num.textContent = new Date().toLocaleDateString("en-CA",
 
 //THREE.JS
 
+// import all functions
 import * as THREE from 'three';
 
-//Setup scene
+// setup scene
 const scene = new THREE.Scene();
 
 
-//get dimensions of wrapper
+// get dimensions of wrapper
 const canvas_wrapper = document.querySelector('.threejs-wrapper');
 const viewport = {
   width: canvas_wrapper.offsetWidth,
@@ -142,27 +149,30 @@ const viewport = {
 const canvas = document.querySelector('.threejs-wrapper__canvas');
 
 // set up camera
-const camera = new THREE.PerspectiveCamera( 95, viewport.width / viewport.height, 0.1, 1000 );
+const camera = new THREE.PerspectiveCamera( 35, viewport.width / viewport.height, 0.1, 1000 );
 
 // set up renderer
 const renderer = new THREE.WebGLRenderer( { canvas, alpha: true } );
-renderer.setPixelRatio(2);
+renderer.setPixelRatio(1);
 renderer.setSize( viewport.width , viewport.height );
 
-// Geometry
+// set up geometry
 const geometry = new THREE.BoxGeometry( 1, 1, 1 );
 
+// create wireframe of cube
 const wireframe = new THREE.WireframeGeometry( geometry );
 
+// draw lines
 const line = new THREE.LineSegments( wireframe );
 line.material.depthTest = false;
 line.material.opacity = 0.24;
 line.material.transparent = true;
 line.material.color.setHex(0x808080);
 
+// add cube to scene
 scene.add( line );
 
-camera.position.z = 0.64;
+camera.position.z = 1;
 
 // Update viewport, camera and renderer sizes on window resize
 window.addEventListener('resize', () =>{
@@ -178,8 +188,10 @@ function animate() {
 	requestAnimationFrame( animate );
 
   // animate cube
-  line.rotation.x += 0.00125;
-  line.rotation.y += 0.00125;
+  
+  line.rotation.x += 0.00025;
+  line.rotation.y += 0.00025;
+
 	
   // render scene
   renderer.render( scene, camera );
