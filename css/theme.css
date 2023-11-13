@@ -254,11 +254,16 @@ small{
 }
 
 .hacked{
-    display: inline-block;
+    display: block;
     font-family: 'Space Mono', monospace;
     font-family: "tt-commons-pro", sans-serif;
     color: var(--primary);
     transition: transform .125s ease-in-out;
+}
+@media screen and (min-width: 1024px) {
+    .hacked{
+        display: inline-block;
+    }
 }
 .hacked:hover{
     transform: translate3d(2.5rem, 0, 0);
