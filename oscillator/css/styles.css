@@ -29,7 +29,7 @@ h2{
     background: #212121;
 }
 .note:hover{
-    cursor: default;
+    cursor: pointer;
     color: #212121;
     background: greenyellow;
 }

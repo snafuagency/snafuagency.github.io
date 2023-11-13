@@ -112,7 +112,7 @@ class Sound {
   var notes = document.querySelectorAll('.note');
   
   notes.forEach((note) => {
-    note.addEventListener('mouseenter', () => {
+    note.addEventListener('click', () => {
       playSound(note);
     })
   })
