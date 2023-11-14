@@ -115,6 +115,9 @@ class Sound {
     note.addEventListener('click', () => {
       playSound(note);
     })
+    note.addEventListener('tap', () => {
+      playSound(note);
+    })
   })
   
   function playSound(note) {
