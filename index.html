@@ -1,368 +1,569 @@
-<!DOCTYPE html>
+<!doctype html>
 
 <html lang="en">
-    
   <head>
     <meta charset="UTF-8">
-    <meta name="description" content="Ian Quinn • Communication Design • UI • UX • Front-end">
-    <meta name="keywords" content="Ian Quinn, Communication Design, UX, UI">
+    <meta name="description" content="Ian Quinn • Freelance Creative">
+    <meta name="keywords" content="Ian Quinn, Freelance Creative">
     <meta name="author" content="Ian Quinn">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="color-scheme" content="light dark">
-    <meta name="theme-color" content="#10069F" media="(prefers-color-scheme: light)">
-    <meta name="theme-color" content="#EDFF00" media="(prefers-color-scheme: dark)">
-    <meta name="keywords" itemprop="keywords" content="design, graphic design, communication design, ui design, ux design, front-end coding, design consultation, design vancouver island, design comox valley, vancouver island, comox valley">
+    <meta name="theme-color" content="#4040f2" media="(prefers-color-scheme: light)">
+    <meta name="theme-color" content="#2d9f71" media="(prefers-color-scheme: dark)">
 
-    <title>Ian Quinn, Freelance Creative • Communication Design • UI • UX • Front-end</title>
-    
-    <link rel="shortcut icon" type="image/x-icon" href="img/iqcreative-neutral.svg">
-    <link rel="apple-touch-icon" type="image/x-icon" href="img/iqcreative-neutral.svg">
-    <link rel="mask-icon" href="img/iqcreative-neutral.svg">
-	  <link rel="icon" type="image/svg" href="img/iqcreative-neutral.svg">
+    <title>
+      Ian Quinn • Freelance Creative •
+      Ian Quinn
+    </title>
 
-    <link rel="preconnect" href="https://fonts.googleapis.com"> 
-   	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin> 
-    <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&family=Space+Mono:ital,wght@0,400;0,700;1,400;1,700&family=Barlow+Condensed:wght@400;900&display=swap" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="https://use.typekit.net/jou1zef.css">
+    <link rel="icon" href="/img/favicon/favicon.ico" sizes="32x32">
+    <link rel="icon" href="/img/favicon/icon.svg" type="image/svg+xml">
+    <link rel="apple-touch-icon" href="/img/favicon/apple-touch-icon.png">
+    <!-- 180×180 -->
+    <link rel="manifest" href="site.webmanifest">
 
-    <link rel="stylesheet" href="css/theme.css?ver=0.0.8">
+    <link rel="stylesheet" href="/css/style.css">
 
-    <script async src="https://unpkg.com/es-module-shims@1.6.3/dist/es-module-shims.js"></script>
-    <script type="importmap">
-      {
-        "imports": {
-          "three": "https://unpkg.com/three@v0.152.2/build/three.module.js",
-          "three/addons/": "https://unpkg.com/three@v0.152.2/examples/jsm/"
+    <!--
+      <script async src="https://unpkg.com/es-module-shims@1.6.3/dist/es-module-shims.js"></script>
+      <script type="importmap">
+        {
+          "imports": {
+            "three": "https://cdn.jsdelivr.net/npm/three@0.166.1/build/three.module.js",
+            "three/addons/": "https://cdn.jsdelivr.net/npm/three@0.166.1/examples/jsm/"
+          }
         }
-      }
-    </script>
+      </script>
+    -->
 
-    <script defer type="module" src="js/theme.js?ver=0.0.1"></script> 
+    <script defer type="module" src="/js/functions.js"></script>
   </head>
-  
-  <body>
 
-    <div class="threejs-wrapper">
-      <canvas class="threejs-wrapper__canvas"></canvas>
+  <body>
+    <div class="visual-grid visual-grid--12">
+  <div></div>
+  <div></div>
+  <div></div>
+  <div></div>
+  <div></div>
+  <div></div>
+  <div></div>
+  <div></div>
+  <div></div>
+  <div></div>
+  <div></div>
+  <div></div>
+</div>
+
+    <div class="visual-grid-elements">
+  <div></div>
+  <div></div>
+  <div></div>
+  <div></div>
+  <div></div>
+  <div></div>
+  <div></div>
+  <div></div>
+  <div></div>
+  <div></div>
+  <div></div>
+  <div></div>
+</div>
+
+
+    
+<button class="nav-wrapper-toggle hide--desktop" title="Navigation Menu">
+  <div class="nav-wrapper-toggle__icon"></div>
+</button>
+
+<div class="nav-wrapper nav-wrapper--hidden">
+  <nav>
+    <div class="nav-group nav-group--home">
+      <div class="nav-link">
+        <a class="nav-link__item nav-link__item--home" href="/" title="Home">
+          <div class="logo-wrapper-sm">
+  <div class="logo-sm">
+    <div class="logo-sm__element logo-sm__element__1"></div>
+    <div class="logo-sm__element logo-sm__element__2"></div>
+    <div class="logo-sm__element logo-sm__element__3"></div>
+    <div class="logo-sm__element logo-sm__element__4"></div>
+    <div class="logo-sm__element logo-sm__element__5"></div>
+    <div class="logo-sm__element logo-sm__element__6"></div>
+    <div class="logo-sm__element logo-sm__element__7"></div>
+    <div class="logo-sm__element logo-sm__element__8"></div>
+  </div>
+</div>
+</a>
+      </div>
     </div>
 
-    <button class="nav-wrapper-toggle hide--desktop" title="Navigation Menu">
-      <div class="nav-wrapper-toggle__icon"></div>
-    </button> 
+    <div class="nav-group nav-group--pages">
+      
+        <div class="nav-link">
+          <a
+            class="nav-link__item"
+            href="/services/"
+          >Services</a>
+          
+        </div>
+      
+        <div class="nav-link">
+          <a
+            class="nav-link__item"
+            href="/work/"
+          >Work</a>
+          
+        </div>
+      
+        <div class="nav-link">
+          <a
+            class="nav-link__item"
+            href="/reverie/"
+          >Reverie</a>
+          
+        </div>
+      
+        <div class="nav-link">
+          <a
+            class="nav-link__item"
+            href="/agency/"
+          >Agency</a>
+          
+        </div>
+      
+        <div class="nav-link">
+          <a
+            class="nav-link__item"
+            href="/inquiries/"
+          >Inquiries</a>
+          
+        </div>
+      
+    </div>
 
-    <div class="nav-wrapper nav-wrapper--hidden">
-      <nav class="page">
-        <a href="#about">About</a>
-        <a href="#services">Services</a>
-        <a href="#agency">Agency</a>
-        <a href="#career">Career</a>
-      </nav>
-      <nav class="online">
-        <a href="https://www.linkedin.com/in/ian-quinn-a7736677" rel="noopener" target="_blank">
-          <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-linkedin" viewBox="0 0 16 16">
-            <title>Ian Quinn on LinkedIn</title>
-            <path d="M0 1.146C0 .513.526 0 1.175 0h13.65C15.474 0 16 .513 16 1.146v13.708c0 .633-.526 1.146-1.175 1.146H1.175C.526 16 0 15.487 0 14.854V1.146zm4.943 12.248V6.169H2.542v7.225h2.401zm-1.2-8.212c.837 0 1.358-.554 1.358-1.248-.015-.709-.52-1.248-1.342-1.248-.822 0-1.359.54-1.359 1.248 0 .694.521 1.248 1.327 1.248h.016zm4.908 8.212V9.359c0-.216.016-.432.08-.586.173-.431.568-.878 1.232-.878.869 0 1.216.662 1.216 1.634v3.865h2.401V9.25c0-2.22-1.184-3.252-2.764-3.252-1.274 0-1.845.7-2.165 1.193v.025h-.016a5.54 5.54 0 0 1 .016-.025V6.169h-2.4c.03.678 0 7.225 0 7.225h2.4z"/>
-          </svg>
-        </a>
-        <a href="https://www.instagram.com/iqcreative" rel="noopener" target="_blank">
-          <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-instagram" viewBox="0 0 16 16">
+    <div class="nav-group nav-group--social">
+      <div class="nav-link">
+        <a
+          class="nav-link__item nav-link__item--social"
+          href="https://www.instagram.com/iqcreative/"
+          rel="noopener"
+          target="_blank"
+        >
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            width="16"
+            height="16"
+            fill="currentColor"
+            class="bi bi-instagram"
+            viewBox="0 0 16 16"
+          >
             <title>Ian Quinn on Instagram</title>
             <path d="M8 0C5.829 0 5.556.01 4.703.048 3.85.088 3.269.222 2.76.42a3.917 3.917 0 0 0-1.417.923A3.927 3.927 0 0 0 .42 2.76C.222 3.268.087 3.85.048 4.7.01 5.555 0 5.827 0 8.001c0 2.172.01 2.444.048 3.297.04.852.174 1.433.372 1.942.205.526.478.972.923 1.417.444.445.89.719 1.416.923.51.198 1.09.333 1.942.372C5.555 15.99 5.827 16 8 16s2.444-.01 3.298-.048c.851-.04 1.434-.174 1.943-.372a3.916 3.916 0 0 0 1.416-.923c.445-.445.718-.891.923-1.417.197-.509.332-1.09.372-1.942C15.99 10.445 16 10.173 16 8s-.01-2.445-.048-3.299c-.04-.851-.175-1.433-.372-1.941a3.926 3.926 0 0 0-.923-1.417A3.911 3.911 0 0 0 13.24.42c-.51-.198-1.092-.333-1.943-.372C10.443.01 10.172 0 7.998 0h.003zm-.717 1.442h.718c2.136 0 2.389.007 3.232.046.78.035 1.204.166 1.486.275.373.145.64.319.92.599.28.28.453.546.598.92.11.281.24.705.275 1.485.039.843.047 1.096.047 3.231s-.008 2.389-.047 3.232c-.035.78-.166 1.203-.275 1.485a2.47 2.47 0 0 1-.599.919c-.28.28-.546.453-.92.598-.28.11-.704.24-1.485.276-.843.038-1.096.047-3.232.047s-2.39-.009-3.233-.047c-.78-.036-1.203-.166-1.485-.276a2.478 2.478 0 0 1-.92-.598 2.48 2.48 0 0 1-.6-.92c-.109-.281-.24-.705-.275-1.485-.038-.843-.046-1.096-.046-3.233 0-2.136.008-2.388.046-3.231.036-.78.166-1.204.276-1.486.145-.373.319-.64.599-.92.28-.28.546-.453.92-.598.282-.11.705-.24 1.485-.276.738-.034 1.024-.044 2.515-.045v.002zm4.988 1.328a.96.96 0 1 0 0 1.92.96.96 0 0 0 0-1.92zm-4.27 1.122a4.109 4.109 0 1 0 0 8.217 4.109 4.109 0 0 0 0-8.217zm0 1.441a2.667 2.667 0 1 1 0 5.334 2.667 2.667 0 0 1 0-5.334z"/>
           </svg>
         </a>
-      </nav>
+      </div>
+      <div class="nav-link">
+        <a
+          class="nav-link__item nav-link__item--social"
+          href="https://www.threads.net/@iqcreative"
+          rel="noopener"
+          target="_blank"
+        >
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            width="16"
+            height="16"
+            fill="currentColor"
+            class="bi bi-bluesky"
+            viewBox="0 0 16 16"
+          >
+            <title>Ian Quinn on Threads</title>
+            <path d="M8.1,16L8.1,16c-2.4,0-4.2-0.8-5.5-2.3C1.6,12.3,1,10.4,1,8v0c0-2.4,0.6-4.3,1.7-5.7C3.9,0.8,5.7,0,8.1,0h0h0
+              c1.8,0,3.4,0.5,4.6,1.4C13.8,2.3,14.6,3.5,15,5l-1.4,0.4c-0.7-2.6-2.6-4-5.5-4C6.2,1.4,4.7,2,3.8,3.2C2.9,4.3,2.4,5.9,2.4,8
+              c0,2.1,0.5,3.7,1.4,4.8c1,1.2,2.4,1.8,4.4,1.8c1.7,0,2.9-0.4,3.9-1.4c1.1-1.1,1.1-2.4,0.7-3.2c-0.2-0.5-0.6-0.9-1.1-1.2
+              c-0.1,0.9-0.4,1.6-0.9,2.2c-0.6,0.7-1.4,1.1-2.5,1.2c-0.8,0-1.6-0.1-2.2-0.5c-0.7-0.5-1.1-1.2-1.2-2c0-0.8,0.3-1.5,0.9-2.1
+              c0.6-0.5,1.4-0.8,2.4-0.9c0.7,0,1.4,0,2,0.1C10.1,6.4,10,6,9.7,5.7C9.4,5.3,8.9,5.1,8.2,5.1c0,0,0,0,0,0C7.6,5.1,6.8,5.3,6.3,6
+              L5.2,5.2c0.7-1,1.7-1.5,3-1.5c0,0,0,0,0,0c2.1,0,3.4,1.3,3.5,3.6c0.1,0,0.1,0.1,0.2,0.1c1,0.5,1.7,1.2,2.1,2c0.5,1.2,0.6,3.2-1,4.8
+              C11.7,15.4,10.3,16,8.1,16L8.1,16L8.1,16z M8.8,8.2c-0.2,0-0.3,0-0.5,0c-1.2,0.1-2,0.6-1.9,1.4c0,0.8,1,1.2,1.9,1.2
+              c0.8,0,1.9-0.4,2.1-2.5C9.8,8.3,9.3,8.2,8.8,8.2z"/>
+          </svg>
+        </a>
+      </div>
+      <div class="nav-link">
+        <a
+          class="nav-link__item nav-link__item--social"
+          rel="noopener"
+          href="https://bsky.app/profile/iqcreative.ca"
+          target="_blank"
+        >
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            width="16"
+            height="16"
+            fill="currentColor"
+            class="bi bi-bluesky"
+            viewBox="0 0 16 16"
+          >
+            <title>Ian Quinn on Bluesky</title>
+            <path d="M3.5,1.9C5.3,3.3,7.3,6.1,8,7.6c0.7-1.5,2.7-4.3,4.5-5.7c1.3-1,3.5-1.8,3.5,0.7c0,0.5-0.3,4.1-0.4,4.7
+              c-0.6,2-2.7,2.6-4.5,2.2c3.2,0.6,4.1,2.4,2.3,4.2c-3.4,3.5-4.9-0.9-5.2-2C8,11.5,8,11.4,8,11.5c0-0.1,0,0-0.1,0.2
+              c-0.4,1.1-1.9,5.4-5.2,2c-1.8-1.8-1-3.6,2.3-4.2C3.1,9.8,1,9.3,0.4,7.3C0.3,6.7,0,3.1,0,2.6C0,0.1,2.1,0.9,3.5,1.9z"/>
+          </svg>
+        </a>
+      </div>
+      <div class="nav-link">
+        <a
+          class="nav-link__item nav-link__item--social"
+          href="https://www.linkedin.com/in/ian-quinn-a7736677/"
+          rel="noopener"
+          target="_blank"
+        >
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            width="16"
+            height="16"
+            fill="currentColor"
+            class="bi bi-linkedin"
+            viewBox="0 0 16 16"
+          >
+            <title>Ian Quinn on LinkedIn</title>
+            <path d="M0 1.146C0 .513.526 0 1.175 0h13.65C15.474 0 16 .513 16 1.146v13.708c0 .633-.526 1.146-1.175 1.146H1.175C.526 16 0 15.487 0 14.854V1.146zm4.943 12.248V6.169H2.542v7.225h2.401zm-1.2-8.212c.837 0 1.358-.554 1.358-1.248-.015-.709-.52-1.248-1.342-1.248-.822 0-1.359.54-1.359 1.248 0 .694.521 1.248 1.327 1.248h.016zm4.908 8.212V9.359c0-.216.016-.432.08-.586.173-.431.568-.878 1.232-.878.869 0 1.216.662 1.216 1.634v3.865h2.401V9.25c0-2.22-1.184-3.252-2.764-3.252-1.274 0-1.845.7-2.165 1.193v.025h-.016a5.54 5.54 0 0 1 .016-.025V6.169h-2.4c.03.678 0 7.225 0 7.225h2.4z"/>
+          </svg>
+        </a>
+      </div>
+      <div class="nav-link">
+        <div class="nav-link__item nav-link__item--avatar" href="/" title="Ian Quinn on Social Media"></div>
+      </div>
     </div>
+  </nav>
+</div>
 
-    <header>
-      <div class="header-inner">
-        <svg class="logo"  id="IQ_logo" data-name="IQ Logo" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 310 240">
-          <title>Ian Quinn Brainstorm Logo</title>
-          <polygon class="poly-1" points="0 120 10 80 35 60 15 140 0 120"/>
-          <polygon class="poly-2" points="35 140 60 40 80 40 55 140 35 140"/>
-          <polygon class="poly-3" points="75 140 105 20 125 20 95 140 75 140"/>
-          <polygon class="poly-4" points="115 140 145 20 170 0 130 160 115 140"/>
-          <polygon class="poly-5" points="215 140 175 140 210 0 190 0 150 160 190 160 170 240 215 140"/>
-          <polygon class="poly-6" points="200 120 230 0 245 20 220 120 200 120"/>
-          <polygon class="poly-7" points="230 160 260 40 280 40 250 160 230 160"/>
-          <polygon class="poly-8" points="270 160 295 60 310 80 295 140 270 160"/>
-        </svg>
-        <h1>Ian Quinn</h1>
-        <h2>Freelance Creative</h2>
-        <nav class="contact">
-          <a href="tel:250-898-9924" rel="noopener">Call</a>
-          <a href="mailto:ian@iqcreative.ca" rel="noopener">Email</a>
-        </nav>
-      </div>
-    </header>
+    <header class="header--home">
+  <section class="header__inner">
     
-    <main>
+      <div class="logo-wrapper">
+  <div class="logo">
+    <div class="logo__element logo__element__1 note" data-frequency="220.00"></div>
+    <div class="logo__element logo__element__2 note" data-frequency="440.00"></div>
+    <div class="logo__element logo__element__3 note" data-frequency="880.00"></div>
+    <div class="logo__element logo__element__4 note" data-frequency="220.00"></div>
+    <div class="logo__element logo__element__5 note" data-frequency="440.00"></div>
+    <div class="logo__element logo__element__6 note" data-frequency="880.00"></div>
+    <div class="logo__element logo__element__7 note" data-frequency="220.00"></div>
+    <div class="logo__element logo__element__8 note" data-frequency="440.00"></div>
+  </div>
+</div>
 
-      <section id="about" class="about ros">
-        <div class="bio-image-wrap">
-          <div class="bio-image-inner">
-            <img class="bio-image" src="img/bio@2x.png" alt="Ian Quinn Headshot" title="Ian Quinn">
-          </div>
-          <div class="bio-image-border"></div>
-        </div>
-        <h1>
-          Today, I will <span class="hacked" data-value="create.">create.</span><br>
-          <!-- Sleep;<br>
-          Repeat. -->
-        </h1>
-        <p>
-          Since 2010, I've been fervently creating in the communication design and web development industry; 
-          aiding a diverse group of clients across Canada tell their stories from grassroot to international markets.
-        </p>
-        <!-- <p>
-          Steeped in pop-culture and media from childhood &mdash; I've been compelled to tell stories through as many mediums and genres as I could tackle:
-          <em>fast music, street photography, electronic sound design, writing for the stage, cinematic video, to name a few</em>.
-          The hard part was trying to bring it all together into something cohesive; 
-          even harder was making somebody <em>feel something</em> through it.
-          It was when I discovered the discipline of design that everything clicked; the glue that held it all of these ideas together.
-        </p> -->
-        
-      </section>
-
-      <section id="services">
-        <h1 class="ros" style="--order: 1;">Services</h1>
-        <article id="comm-design" class="ros" style="--order: 2;">
-	        <h2>Communication Design</h2>
-          <ul>
-            <li>Responsive mobile-first design for web;</li>
-            <li>Small & large format print design;</li>
-            <li>Digital marketing collateral;</li>
-            <li>Comprehensive branding systems;</li>
-            <li>Digital & Print-ready branding collateral.</li>
-          </ul>
-        </article>
-        <article id="branding-identity" class="ros" style="--order: 3;">
-	        <h2>Brand Identity Design</h2>
-          <ul>
-            <li>Logotypes & Logomarks;</li>
-            <li>Digital & Print-ready Colour Systems;</li>
-            <li>Typopgraphy Systems;</li>
-            <li>Design Tokens and Assets kits;</li>
-            <li>Brand Application;</li>
-          </ul>
-        </article>
-        <article id="ui" class="ros" style="--order: 4;">
-	        <h2>UI Design</h2>
-          <ul>
-            <li>Content hierarchy;</li>
-            <li>Layout design;</li>
-            <li>Typography systems;</li>
-            <li>Accessibility.</li>
-          </ul>
-        </article>
-        <article id="ux" class="ros" style="--order: 5;">
-	        <h2>UX Design</h2>
-          <ul>
-            <li>Landing pages;</li>
-            <li>Conversion optimization;</li>
-            <li>Onboarding;</li>
-            <li>Storytelling.</li>
-          </ul>
-        </article>
-        <article id="front-end" class="ros" style="--order: 6;">
-	        <h2>Front-End Coding</h2>
-          <ul>
-            <li>Semantic HTML5;</li>
-            <li>BEM structured CSS & SASS;</li>
-            <li>JavaScript & jQuery.</li>
-          </ul>
-        </article>
-        <article id="consultation" class="ros" style="--order: 7;">
-	        <h2>Consultation</h2>
-          <ul>
-            <li>Design Audits.</li>
-          </ul>
-        </article>
-      </section>
-
-      <section id="agency">
-        <h1 class="ros" style="--order: 1;">Agency</h1>
-        <article id="values" class="article-grid">
-	        <h2 class="ros" style="--order: 2;">Core Values</h2>
-          <ol>
-            <li class="ros" style="--order: 3;">
-              <h3>Meaningful Relationships</h3>
-              <p>
-                Develop meaningful relationships with clients who are planning meaningful projects. 
-                Work <em>with</em> clients — not just for them.
-              </p>
-            </li>
-            <li class="ros" style="--order: 4;">
-              <h3>Professionalism</h3>
-              <p>
-                Produce professional quality deliverables in a professional manner.
-              </p>
-            </li>
-            <li class="ros" style="--order: 5;">
-              <h3>Conceptual Design</h3>
-              <p>
-                Creative begins with a strong concept and is to be executed with that concept as a guide.   
-              </p>
-            </li>
-            <li class="ros" style="--order: 6;">
-              <h3>Minimalist Design</h3>
-              <p>
-                Design only what is necessary to successfully communicate the message with the end-user. 
-                Everything else is considered a distraction.
-              </p>
-            </li>
-            <li class="ros" style="--order: 6;">
-              <h3>Strategic Foresight</h3>
-              <p>
-                Keep a thumb on the pulse of what is to come. 
-                Be in a constant state of learning. 
-                Always be planning for the future.
-              </p>
-            </li>
-            <li class="ros" style="--order: 7;">
-              <h3>Zero Spec Work</h3>
-              <p>
-                <em>Do not</em> work for free. <br>
-                <em>Do not</em> work for exposure. <br>
-                <em>Do not</em> enter design contests.
-              </p>
-            </li>
-            <li class="ros" style="--order: 8;">
-              <h3>Family First</h3>
-              <p>
-                The health and well-being of family will always be more important than any deadline.
-              </p>
-            </li>
-            <li class="ros" style="--order: 9;">
-              <h3>Prioritize Mental Health</h3>
-              <p>
-                Personal health and well-being will always be more important than any deadline.   
-              </p>
-            </li>
-          </ol>
-        </article>
-        <article id="process" class="article-grid">
-	        <h2 class="ros" style="--order: 1;">Process</h2>
-          <ol>
-            <li class="ros" style="--order: 2;">
-              <h3>Discovery</h3>
-              <p>
-                We say hello, either virtually or in-person. We get to know each other, talk about why we could benefit from working together, and decide whether or not the fit is right.
-              </p>
-            </li>
-            <li class="ros" style="--order: 3;">
-              <h3>Estimates & Proposals</h3>
-              <p>
-                After meeting, we discuss and agree on pricing, timelines and project specifications. <em>A signed contract and deposit are required before work begins.</em>
-              </p>
-            </li>
-            <li class="ros" style="--order: 4;">
-              <h3>Project Kickoff</h3>
-              <p>
-                We go deep into brainstorming project details, your marketing strategy, required technical functionality and project review points. 
-              </p>
-            </li>
-            <li class="ros" style="--order: 5;">
-              <h3>Project Research</h3>
-              <p>
-                I go deep into the possibilities.
-              </p>
-            </li>
-            <li class="ros" style="--order: 6;">
-              <h3>Design Concepts</h3>
-              <p>
-                We discuss the findings.
-              </p>
-            </li>
-            <li class="ros" style="--order: 7;">
-              <h3>Design Production</h3>
-              <p>
-                I get to work. We review said work and invoice at the agreed upon stages.
-              </p>
-            </li>
-            <li class="ros" style="--order: 8;">
-              <h3>Final Approvals</h3>
-              <p>
-                Production is finalized and a decision is made on the quality-control of deliverables. Final approval is given and the project is fully invoiced.
-              </p>
-            </li>
-            <li class="ros" style="--order: 9;">
-              <h3>Payment & Delivery</h3>
-              <p>
-                After final invoices are paid, deliverables are set-free into the wild.
-              </p>
-            </li>
-          </ol>
-        </article>
-      </section>
-
-      <section id="career">
-        <h1 class="ros" style="--order: 1;">Career</h1>
-        <article id="experience" class="ros" style="--order: 2;">
-	        <h2>Experience</h2>
-
-          <h3>Freelance v2</h3>
-          <ul>
-            <li>2022–Present.</li>
-          </ul>
-
-          <h3>The Update Company</h3>
-          <ul>
-            <li>Creative Lead — 2022;</li>
-            <li>Senior Designer — 2018–2022;</li>
-            <li>Designer — 2013–2018.</li>
-          </ul>
-
-          <h3>Freelance v1</h3>
-          <ul>
-            <li>2010–2013</li>
-          </ul>
-
-        </article>
-        <article id="education" class="ros" style="--order: 3;">
-	        <h2>Education</h2>
-          
-          <h3>North Island College</h3>
-          <ul>
-            <li>Dean's Honour Roll — Interactive Media Program;</li>
-            <li>Interactive Media Advanced Communication Design Diploma — 2010–2013;</li>
-            <li>Interactive Media Web Development Diploma — 2010–2013.</li>
-          </ul>
-          
-          <h3>East Northumberland Secondary School</h3>
-          <ul>
-            <li>Ontario Secondary School Diploma 2003;</li>
-          </ul>
-          
-        </article>
-      </section>
     
-    </main>
+
     
+      <h1>Ian Quinn</h1>
+    
+
+    
+      <h2>Freelance Creative</h2>
+    
+
+    
+      <p>Since 2010, I've been fervently creating in the communication design and web development industry; aiding a diverse group of clients across Canada tell their stories from grassroot to international markets.</p>
+    
+  </section>
+</header>
+
+    <main class="main--home">
+    <section>
+  <h2>Services</h2>
+  <section class="asset-grid">
+    
+      <article class="asset">
+  <a class="asset__img-wrapper" href="/services/communication-design/">
+    <img
+      class="asset__img"
+      src="/img/ian-avatar.webp"
+      alt="Image by Lorem Picsum - Alt"
+      title="Image by Lorem Picsum - Alt"
+      loading="lazy"
+    >
+  </a>
+  <div class="asset__content-wrapper">
+    <h3 class="asset__title">
+      <a href="/services/communication-design/">Communication Design</a>
+    </h3>
+    
+  </div>
+</article>
+
+    
+      <article class="asset">
+  <a class="asset__img-wrapper" href="/services/ux-design/">
+    <img
+      class="asset__img"
+      src="/img/ian-avatar.webp"
+      alt="Image by Lorem Picsum - Alt"
+      title="Image by Lorem Picsum - Alt"
+      loading="lazy"
+    >
+  </a>
+  <div class="asset__content-wrapper">
+    <h3 class="asset__title">
+      <a href="/services/ux-design/">UX Design</a>
+    </h3>
+    
+  </div>
+</article>
+
+    
+      <article class="asset">
+  <a class="asset__img-wrapper" href="/services/ui-design/">
+    <img
+      class="asset__img"
+      src="/img/ian-avatar.webp"
+      alt="Image by Lorem Picsum - Alt"
+      title="Image by Lorem Picsum - Alt"
+      loading="lazy"
+    >
+  </a>
+  <div class="asset__content-wrapper">
+    <h3 class="asset__title">
+      <a href="/services/ui-design/">UI Design</a>
+    </h3>
+    
+  </div>
+</article>
+
+    
+      <article class="asset">
+  <a class="asset__img-wrapper" href="/services/brand-identity-design/">
+    <img
+      class="asset__img"
+      src="/img/ian-avatar.webp"
+      alt="Image by Lorem Picsum - Alt"
+      title="Image by Lorem Picsum - Alt"
+      loading="lazy"
+    >
+  </a>
+  <div class="asset__content-wrapper">
+    <h3 class="asset__title">
+      <a href="/services/brand-identity-design/">Brand Identity Design</a>
+    </h3>
+    
+  </div>
+</article>
+
+    
+      <article class="asset">
+  <a class="asset__img-wrapper" href="/services/front-end-development/">
+    <img
+      class="asset__img"
+      src="/img/ian-avatar.webp"
+      alt="Image by Lorem Picsum - Alt"
+      title="Image by Lorem Picsum - Alt"
+      loading="lazy"
+    >
+  </a>
+  <div class="asset__content-wrapper">
+    <h3 class="asset__title">
+      <a href="/services/front-end-development/">Front-End Development</a>
+    </h3>
+    
+  </div>
+</article>
+
+    
+      <article class="asset">
+  <a class="asset__img-wrapper" href="/services/consultation/">
+    <img
+      class="asset__img"
+      src="/img/ian-avatar.webp"
+      alt="Image by Lorem Picsum - Alt"
+      title="Image by Lorem Picsum - Alt"
+      loading="lazy"
+    >
+  </a>
+  <div class="asset__content-wrapper">
+    <h3 class="asset__title">
+      <a href="/services/consultation/">Consultation</a>
+    </h3>
+    
+  </div>
+</article>
+
+    
+  </section>
+  <h2>Select Works</h2>
+  <section class="asset-grid">
+    
+      <article class="asset">
+  <a class="asset__img-wrapper" href="/work/coastal-water-protectors/">
+    <img
+      class="asset__img"
+      src="/img/ian-avatar.webp"
+      alt="Image by Lorem Picsum - Alt"
+      title="Image by Lorem Picsum - Alt"
+      loading="lazy"
+    >
+  </a>
+  <div class="asset__content-wrapper">
+    <h3 class="asset__title">
+      <a href="/work/coastal-water-protectors/">Coastal Water Protectors</a>
+    </h3>
+    
+  </div>
+</article>
+
+    
+      <article class="asset">
+  <a class="asset__img-wrapper" href="/work/evan-jolicoeur/">
+    <img
+      class="asset__img"
+      src="/img/ian-avatar.webp"
+      alt="Image by Lorem Picsum - Alt"
+      title="Image by Lorem Picsum - Alt"
+      loading="lazy"
+    >
+  </a>
+  <div class="asset__content-wrapper">
+    <h3 class="asset__title">
+      <a href="/work/evan-jolicoeur/">Evan Jolicoeur</a>
+    </h3>
+    
+  </div>
+</article>
+
+    
+      <article class="asset">
+  <a class="asset__img-wrapper" href="/work/canadian-outdoor-leadership-training/">
+    <img
+      class="asset__img"
+      src="/img/ian-avatar.webp"
+      alt="Image by Lorem Picsum - Alt"
+      title="Image by Lorem Picsum - Alt"
+      loading="lazy"
+    >
+  </a>
+  <div class="asset__content-wrapper">
+    <h3 class="asset__title">
+      <a href="/work/canadian-outdoor-leadership-training/">Canadian Outdoor Leadership Training</a>
+    </h3>
+    
+  </div>
+</article>
+
+    
+      <article class="asset">
+  <a class="asset__img-wrapper" href="/work/strathcona-park-lodge/">
+    <img
+      class="asset__img"
+      src="/img/ian-avatar.webp"
+      alt="Image by Lorem Picsum - Alt"
+      title="Image by Lorem Picsum - Alt"
+      loading="lazy"
+    >
+  </a>
+  <div class="asset__content-wrapper">
+    <h3 class="asset__title">
+      <a href="/work/strathcona-park-lodge/">Strathcona Park Lodge</a>
+    </h3>
+    
+  </div>
+</article>
+
+    
+      <article class="asset">
+  <a class="asset__img-wrapper" href="/work/village-of-cumberland/">
+    <img
+      class="asset__img"
+      src="/img/ian-avatar.webp"
+      alt="Image by Lorem Picsum - Alt"
+      title="Image by Lorem Picsum - Alt"
+      loading="lazy"
+    >
+  </a>
+  <div class="asset__content-wrapper">
+    <h3 class="asset__title">
+      <a href="/work/village-of-cumberland/">Village of Cumberland</a>
+    </h3>
+    
+  </div>
+</article>
+
+    
+      <article class="asset">
+  <a class="asset__img-wrapper" href="/work/destination-indigenous/">
+    <img
+      class="asset__img"
+      src="/img/ian-avatar.webp"
+      alt="Image by Lorem Picsum - Alt"
+      title="Image by Lorem Picsum - Alt"
+      loading="lazy"
+    >
+  </a>
+  <div class="asset__content-wrapper">
+    <h3 class="asset__title">
+      <a href="/work/destination-indigenous/">Destination Indigenous</a>
+    </h3>
+    
+  </div>
+</article>
+
+    
+  </section>
+  <h2>Reverie</h2>
+  <section class="asset-grid">
+    
+      <article class="asset">
+  <a class="asset__img-wrapper" href="/reverie/2023-12-23-lomography/">
+    <img
+      class="asset__img"
+      src="/img/ian-avatar.webp"
+      alt="Image by Lorem Picsum - Alt"
+      title="Image by Lorem Picsum - Alt"
+      loading="lazy"
+    >
+  </a>
+  <div class="asset__content-wrapper">
+    <h3 class="asset__title">
+      <a href="/reverie/2023-12-23-lomography/">Lomography</a>
+    </h3>
+    
+  </div>
+</article>
+
+    
+      <article class="asset">
+  <a class="asset__img-wrapper" href="/reverie/2024-06-24-oscillator/">
+    <img
+      class="asset__img"
+      src="/img/ian-avatar.webp"
+      alt="Image by Lorem Picsum - Alt"
+      title="Image by Lorem Picsum - Alt"
+      loading="lazy"
+    >
+  </a>
+  <div class="asset__content-wrapper">
+    <h3 class="asset__title">
+      <a href="/reverie/2024-06-24-oscillator/">Oscillator</a>
+    </h3>
+    
+  </div>
+</article>
+
+    
+  </section>
+</section>
+
+</main>
     <aside>
-      <div class="aside-inner">
-        <h3 class="aside-heading">Inquiries</h3>
-        <p class="aside-content">
-          For inquiries regarding creative services, please call or email at:<br><br>
-          <a href="tel:250-898-9924" rel="noopener">+1 (250) 898-9924</a> &emsp;
-          <a href="mailto:ian@iqcreative.ca" rel="noopener">Ian@IQCreative.ca</a>
-        </p>
-        
-        <hr class="hr aside-hr"/>
-        <small class="clock__num">D, M DD, YY, HH:MM:SS.MS TMZ+0</small>
-        <small class="mouse-coordinates">X<span class="mouse-coordinates__x">0</span> Y<span class="mouse-coordinates__y">0</span></small>
-        <small class="om">&#9737;</small>
-       
-      </div>
-    </aside>
-    
+  
+</aside>
+
     <footer>
-      <p class="footer-acknowledgement">
-        I respectfully acknowledge that the land we gather on is on the Unceded Traditional Territory of the <a href="https://komoks.ca/" rel="noopener" target="_blank">K’ómoks First Nation</a>, the traditional keepers of this land.
-      </p>
-      <small>&copy; <span id="copyright_year">2023</span> Ian Quinn</small>
-    </footer>
+    <h4>I respectfully acknowledge that the land we gather on is on the Unceded Traditional Territory of the <a href="https://komoks.ca/" rel="noopener" target="_blank">K’ómoks First Nation</a>, the traditional keepers of this land.</h4>
+    <small>© <span id="copyright_year">2024</span> <a href="https://iqcreative.ca" target="_blank">Ian Quinn Creative Co.</a></small>
+</footer>
+
+    
+
     
   </body>
-  
 </html>
