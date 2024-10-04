@@ -686,19 +686,9 @@ hr {
   align-items: center;
   margin: 0;
   border-radius: 0.5rem;
-  background-color: var(--white);
 }
 .asset:hover, .asset:focus {
-  background-color: var(--white);
   cursor: pointer;
-}
-@media (prefers-color-scheme: dark) {
-  .asset {
-    background-color: var(--black);
-  }
-  .asset:hover, .asset:focus {
-    background-color: var(--black);
-  }
 }
 .asset__img-wrapper {
   flex-grow: 0;
