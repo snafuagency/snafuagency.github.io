@@ -39,6 +39,16 @@
   font-family: "Barlow Condensed Black";
   src: url("../fonts/BarlowCondensed-Black.woff2") format("woff2");
 }
+/* Inter */
+@font-face {
+  font-family: "Inter";
+  src: url("../fonts/InterVariable.woff2") format("woff2");
+}
+/* Inter Italic */
+@font-face {
+  font-family: "Inter Italic";
+  src: url("../fonts/InterVariable-Italic.woff2") format("woff2");
+}
 /* Geist */
 @font-face {
   font-family: "Geist";
@@ -64,7 +74,7 @@ body {
   grid-template-areas: "nav" "header" "main" "aside" "footer" "visualgrid";
   margin: 0;
   background-color: var(--background);
-  font-family: "Geist", system-ui, sans-serif;
+  font-family: "Inter", system-ui, sans-serif;
   font-size: 1rem;
   color: var(--neutral);
 }
