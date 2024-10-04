@@ -443,7 +443,7 @@ main {
 }
 @media screen and (min-width: 1440px) {
   main.main--home {
-    grid-column: 4/span 6;
+    grid-column: 5/span 4;
   }
 }
 main img {
@@ -528,7 +528,7 @@ article {
 hr {
   margin: 4rem 0;
   border: 0;
-  height: 0.125rem;
+  height: 0.025rem;
   background-color: var(--primary);
 }
 
